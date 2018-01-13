@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="PHPDoctor 2.0.5 (http://peej.github.com/phpdoctor/)">
+<meta name="when" content="Sat, 26 Mar 2016 06:21:40 +0000">
+
+<link rel="stylesheet" type="text/css" href="../stylesheet.css">
+<link rel="start" href="../namespaces.html">
+
+<title>AkString (PHPDoctor)</title>
+
+</head>
+<body id="definition">
+
+<header><h1>PHPDoctor: The PHP Documentation Creator</h1><span>Class</span>
+
+<h2>LIB-Ak\AkString</h2>
+
+</header><p class="signature">public  class <strong>AkString</strong></p>
+
+<div class="comment"><p>string manager</p></div>
+
+<table>
+<tr><th>Author</th>
+<td>akiler <532171911@qq.com></td>
+</tr><tr><th>Copyright</th>
+<td>Copyright(c) 2010-2020 by akiler. All rights reserved</td>
+</tr><tr><th>Version</th>
+<td>1.0</td>
+</tr><tr><th>Since</th>
+<td>2010-09-29 14:06:12</td>
+</tr></table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td class="type">static  string|null</td>
+<td class="description"><p class="name"><a href="#German_decode()">German_decode</a>(string info)</p><p class="description">decode the German characters</p></td>
+</tr>
+<tr>
+<td class="type">static  string|array</td>
+<td class="description"><p class="name"><a href="#addslashes_deep()">addslashes_deep</a>(string|array var)</p><p class="description">add slashes into all $var string, include array</p></td>
+</tr>
+<tr>
+<td class="type">static  string</td>
+<td class="description"><p class="name"><a href="#arr2equation()">arr2equation</a>(array array, string symbol)</p><p class="description">convert array to equation</p></td>
+</tr>
+<tr>
+<td class="type">static  string</td>
+<td class="description"><p class="name"><a href="#arr2str()">arr2str</a>(array array)</p><p class="description">convert array to string</p></td>
+</tr>
+<tr>
+<td class="type">static  array</td>
+<td class="description"><p class="name"><a href="#arrayGetRepeat()">arrayGetRepeat</a>($array array)</p><p class="description">get the repeat elements in the array</p></td>
+</tr>
+<tr>
+<td class="type">static  string</td>
+<td class="description"><p class="name"><a href="#camel2underline()">camel2underline</a>($name name)</p><p class="description">change camel to be underline
+e.g.: AkString -> ak_string</p></td>
+</tr>
+<tr>
+<td class="type">static  string</td>
+<td class="description"><p class="name"><a href="#changeCharset()">changeCharset</a>(string source, string to_charset)</p><p class="description">change charset to utf-8(default)</p></td>
+</tr>
+<tr>
+<td class="type">static  string</td>
+<td class="description"><p class="name"><a href="#charsetToUTF8()">charsetToUTF8</a>($source source)</p><p class="description">change charset to be UTF-8</p></td>
+</tr>
+<tr>
+<td class="type">static  array</td>
+<td class="description"><p class="name"><a href="#checkWordCase()">checkWordCase</a>(string word)</p><p class="description">check the word case
+return array include upper and lower number</p></td>
+</tr>
+<tr>
+<td class="type">static  string</td>
+<td class="description"><p class="name"><a href="#csubstr()">csubstr</a>(string str, int start, int length, string charset, $suffix suffix)</p><p class="description">chinese cut, support gb2312,gbk,utf-8,big5</p></td>
+</tr>
+<tr>
+<td class="type">static  datetime|date</td>
+<td class="description"><p class="name"><a href="#dateFormat()">dateFormat</a>(string datetime, string format)</p><p class="description">format a datetime string by $format</p></td>
+</tr>
+<tr>
+<td class="type">static  string|integer</td>
+<td class="description"><p class="name"><a href="#dateString2time()">dateString2time</a>(string datetime)</p><p class="description">format datetime string to a time string
+the $datetime must be a correct date time format, or error will happen.
+</p></td>
+</tr>
+<tr>
+<td class="type">static  void</td>
+<td class="description"><p class="name"><a href="#decrypt()">decrypt</a>(mixed txt, str key)</p></td>
+</tr>
+<tr>
+<td class="type">static  void</td>
+<td class="description"><p class="name"><a href="#encrypt()">encrypt</a>(mixed txt, str key)</p></td>
+</tr>
+<tr>
+<td class="type">static  void</td>
+<td class="description"><p class="name"><a href="#file_arr2str()">file_arr2str</a>(mixed array, bool md5)</p></td>
+</tr>
+<tr>
+<td class="type">static  bool</td>
+<td class="description"><p class="name"><a href="#file_identical()">file_identical</a>($fn1 fn1, $fn2 fn2)</p><p class="description">check if the two files are the same one
+pass two file names and path</p></td>
+</tr>
+<tr>
+<td class="type">static  void</td>
+<td class="description"><p class="name"><a href="#file_identical_md5()">file_identical_md5</a>(mixed fn1, mixed fn2)</p></td>
+</tr>
+<tr>
+<td class="type">static  void</td>
+<td class="description"><p class="name"><a href="#file_str2arr()">file_str2arr</a>(mixed string)</p></td>
+</tr>
+<tr>
+<td class="type">static  array</td>
+<td class="description"><p class="name"><a href="#getActionList()">getActionList</a>($module module, $module_ignore module_ignore)</p><p class="description">get action list of pointed class</p></td>
+</tr>
+<tr>
+<td class="type">static  datetime</td>
+<td class="description"><p class="name"><a href="#getClientDate()">getClientDate</a>(datetime datatime, integer timeoffset, string format)</p><p class="description">get client time by offset, because there is a difference between client and server on the time</p></td>
+</tr>
+<tr>
+<td class="type">static  string</td>
+<td class="description"><p class="name"><a href="#getClientIP()">getClientIP</a>()</p><p class="description">get IP address of client</p></td>
+</tr>
+<tr>
+<td class="type">static  array</td>
+<td class="description"><p class="name"><a href="#getDateRange()">getDateRange</a>(int type, string year, string month, string format)</p><p class="description">get date range</p></td>
+</tr>
+<tr>
+<td class="type">static  encode||false</td>
+<td class="description"><p class="name"><a href="#getFileEncode()">getFileEncode</a>(string filename)</p><p class="description">get the encode of file</p></td>
+</tr>
+<tr>
+<td class="type">static  string</td>
+<td class="description"><p class="name"><a href="#getFunctionComment()">getFunctionComment</a>($module module, $function function)</p><p class="description">get comments of function</p></td>
+</tr>
+<tr>
+<td class="type">static  string</td>
+<td class="description"><p class="name"><a href="#getGermanStr()">getGermanStr</a>(string string, bool both)</p><p class="description">get special characters of German</p></td>
+</tr>
+<tr>
+<td class="type">static  string</td>
+<td class="description"><p class="name"><a href="#getMicroString()">getMicroString</a>()</p><p class="description">get the time string
+include Micro time</p></td>
+</tr>
+<tr>
+<td class="type">static  float</td>
+<td class="description"><p class="name"><a href="#getMicroTime()">getMicroTime</a>()</p><p class="description">get current time
+include second and micro time</p></td>
+</tr>
+<tr>
+<td class="type">static  string</td>
+<td class="description"><p class="name"><a href="#getRand()">getRand</a>(int limit)</p><p class="description">get a string by rand, and not to be duplicated</p></td>
+</tr>
+<tr>
+<td class="type">static  integer</td>
+<td class="description"><p class="name"><a href="#get_timezone_offset()">get_timezone_offset</a>(string remote_tz:, string origin_tz:, str remote_tz, mixed origin_tz)</p><p class="description">Returns the offset from the origin timezone to the remote timezone, in seconds.</p></td>
+</tr>
+<tr>
+<td class="type">static  bool</td>
+<td class="description"><p class="name"><a href="#hasNumber()">hasNumber</a>(string string)</p><p class="description">check if a string include number</p></td>
+</tr>
+<tr>
+<td class="type">static  mixed</td>
+<td class="description"><p class="name"><a href="#html2text()">html2text</a>(string encode, mixed str)</p><p class="description">change html to text string, filter the html tags</p></td>
+</tr>
+<tr>
+<td class="type">static  bool</td>
+<td class="description"><p class="name"><a href="#in_array_imp()">in_array_imp</a>(string needle, array haystack)</p><p class="description">to improve the function in_array of PHP</p></td>
+</tr>
+<tr>
+<td class="type">static  bool</td>
+<td class="description"><p class="name"><a href="#isAjax()">isAjax</a>()</p><p class="description">check if the request is Ajax</p></td>
+</tr>
+<tr>
+<td class="type">static  bool</td>
+<td class="description"><p class="name"><a href="#isInclude()">isInclude</a>(string|array source, string str_check)</p><p class="description">check the $source, if include $str_check</p></td>
+</tr>
+<tr>
+<td class="type">static  void</td>
+<td class="description"><p class="name"><a href="#jsonReturn()">jsonReturn</a>(int code, string message, array data, bool|true exit)</p><p class="description">return json data format</p></td>
+</tr>
+<tr>
+<td class="type">static  array</td>
+<td class="description"><p class="name"><a href="#multiexplode()">multiexplode</a>(array delimiters, string string)</p><p class="description">multi explode</p></td>
+</tr>
+<tr>
+<td class="type">static  array</td>
+<td class="description"><p class="name"><a href="#multineedle_stripos()">multineedle_stripos</a>(string haystack, array needles, integer offset)</p><p class="description">get needles position by array inputinput multi needles by array</p></td>
+</tr>
+<tr>
+<td class="type">static  string</td>
+<td class="description"><p class="name"><a href="#passport_decrypt()">passport_decrypt</a>(string txt, string key)</p><p class="description">decipher the string by key</p></td>
+</tr>
+<tr>
+<td class="type">static  string</td>
+<td class="description"><p class="name"><a href="#passport_encrypt()">passport_encrypt</a>(string txt, string key)</p><p class="description">encrypt the string by key
+when you decipher the string, must use the key</p></td>
+</tr>
+<tr>
+<td class="type">static  string</td>
+<td class="description"><p class="name"><a href="#passport_key()">passport_key</a>(string txt, string encrypt_key)</p><p class="description">encypt the key into a string</p></td>
+</tr>
+<tr>
+<td class="type">static  void</td>
+<td class="description"><p class="name"><a href="#printM()">printM</a>(string|array var, bool isExit)</p><p class="description">format to print info
+$var can be string or array
+$isExit means if to exit from the code running, if true, exit.</p></td>
+</tr>
+<tr>
+<td class="type">static  string</td>
+<td class="description"><p class="name"><a href="#size_format()">size_format</a>(string string, integer decimal, string toFormat)</p><p class="description">size_format modifier pluginchanged in 2013-01-19</p></td>
+</tr>
+<tr>
+<td class="type">static  array</td>
+<td class="description"><p class="name"><a href="#str2arr()">str2arr</a>(string string)</p><p class="description">convert string to array</p></td>
+</tr>
+<tr>
+<td class="type">static  void</td>
+<td class="description"><p class="name"><a href="#str_coder()">str_coder</a>(mixed str, str _type)</p></td>
+</tr>
+<tr>
+<td class="type">static  bool</td>
+<td class="description"><p class="name"><a href="#stripDiskFileName()">stripDiskFileName</a>(string name)</p><p class="description">strip the char can not include in disk file name.</p></td>
+</tr>
+<tr>
+<td class="type">static  string|array</td>
+<td class="description"><p class="name"><a href="#stripslashes_deep()">stripslashes_deep</a>(string|array var)</p><p class="description">strip slashes of $var, include array</p></td>
+</tr>
+<tr>
+<td class="type">static  integer</td>
+<td class="description"><p class="name"><a href="#strlen_real()">strlen_real</a>(string str, string charset)</p><p class="description">get the real length of string, include chinese character</p></td>
+</tr>
+</table>
+
+<h3>Details</h3>
+<code class="signature" id="German_decode">public static  string|null <strong>German_decode</strong>(string info)</code>
+<div class="details">
+<p>decode the German characters</p></div>
+
+<code class="signature" id="addslashes_deep">public static  string|array <strong>addslashes_deep</strong>(string|array var)</code>
+<div class="details">
+<p>add slashes into all $var string, include array</p></div>
+
+<code class="signature" id="arr2equation">public static  string <strong>arr2equation</strong>(array array, string symbol)</code>
+<div class="details">
+<p>convert array to equation</p><table>
+<tr><th>Parameters</th>
+<td>array - data</td>
+<td>symbol - to connect the equation</td>
+</tr></table>
+</div>
+
+<code class="signature" id="arr2str">public static  string <strong>arr2str</strong>(array array)</code>
+<div class="details">
+<p>convert array to string</p></div>
+
+<code class="signature" id="arrayGetRepeat">public static  array <strong>arrayGetRepeat</strong>($array array)</code>
+<div class="details">
+<p>get the repeat elements in the array</p></div>
+
+<code class="signature" id="camel2underline">public static  string <strong>camel2underline</strong>($name name)</code>
+<div class="details">
+<p>change camel to be underline
+e.g.: AkString -> ak_string</p></div>
+
+<code class="signature" id="changeCharset">public static  string <strong>changeCharset</strong>(string source, string to_charset)</code>
+<div class="details">
+<p>change charset to utf-8(default)</p><table>
+<tr><th>Parameters</th>
+<td>source - the string will be changed</td>
+<td>to_charset - out charset</td>
+</tr></table>
+</div>
+
+<code class="signature" id="charsetToUTF8">public static  string <strong>charsetToUTF8</strong>($source source)</code>
+<div class="details">
+<p>change charset to be UTF-8</p></div>
+
+<code class="signature" id="checkWordCase">public static  array <strong>checkWordCase</strong>(string word)</code>
+<div class="details">
+<p>check the word case
+return array include upper and lower number</p></div>
+
+<code class="signature" id="csubstr">public static  string <strong>csubstr</strong>(string str, int start, int length, string charset, $suffix suffix)</code>
+<div class="details">
+<p>chinese cut, support gb2312,gbk,utf-8,big5</p><table>
+<tr><th>Parameters</th>
+<td>str - source string</td>
+<td>start - start position</td>
+<td>length - cut length</td>
+<td>charset - utf-8|gb2312|gbk|big5</td>
+<td></td>
+</tr></table>
+</div>
+
+<code class="signature" id="dateFormat">public static  datetime|date <strong>dateFormat</strong>(string datetime, string format)</code>
+<div class="details">
+<p>format a datetime string by $format</p><table>
+<tr><th>Parameters</th>
+<td>datetime - e.g. 20120403</td>
+<td></td>
+</tr></table>
+</div>
+
+<code class="signature" id="dateString2time">public static  string|integer <strong>dateString2time</strong>(string datetime)</code>
+<div class="details">
+<p>format datetime string to a time string
+the $datetime must be a correct date time format, or error will happen.</p><p>e.g. dateString2time('09/11/2013 13:13:39') => 1381468419</p></div>
+
+<code class="signature" id="decrypt">public static  void <strong>decrypt</strong>(mixed txt, str key)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="encrypt">public static  void <strong>encrypt</strong>(mixed txt, str key)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="file_arr2str">public static  void <strong>file_arr2str</strong>(mixed array, bool md5)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="file_identical">public static  bool <strong>file_identical</strong>($fn1 fn1, $fn2 fn2)</code>
+<div class="details">
+<p>check if the two files are the same one
+pass two file names and path</p><table>
+<tr><th>Returns</th>
+<td>- TRUE if files are the same, FALSE otherwise</td>
+</tr></table>
+</div>
+
+<code class="signature" id="file_identical_md5">public static  void <strong>file_identical_md5</strong>(mixed fn1, mixed fn2)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="file_str2arr">public static  void <strong>file_str2arr</strong>(mixed string)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="getActionList">public static  array <strong>getActionList</strong>($module module, $module_ignore module_ignore)</code>
+<div class="details">
+<p>get action list of pointed class</p></div>
+
+<code class="signature" id="getClientDate">public static  datetime <strong>getClientDate</strong>(datetime datatime, integer timeoffset, string format)</code>
+<div class="details">
+<p>get client time by offset, because there is a difference between client and server on the time</p><table>
+<tr><th>Parameters</th>
+<td>datatime - '2014-06-28 12:12:12'</td>
+<td>timeoffset - second</td>
+<td>format - default 'Y-m-d H:i:s'</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getClientIP">public static  string <strong>getClientIP</strong>()</code>
+<div class="details">
+<p>get IP address of client</p></div>
+
+<code class="signature" id="getDateRange">public static  array <strong>getDateRange</strong>(int type, string year, string month, string format)</code>
+<div class="details">
+<p>get date range</p><table>
+<tr><th>Returns</th>
+<td>= array('from' => '2014-11-01 00:00:00', 'to' => '2014-11-30 12:59:59)</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getFileEncode">public static  encode||false <strong>getFileEncode</strong>(string filename)</code>
+<div class="details">
+<p>get the encode of file</p><table>
+<tr><th>Parameters</th>
+<td>filename - path to the file</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getFunctionComment">public static  string <strong>getFunctionComment</strong>($module module, $function function)</code>
+<div class="details">
+<p>get comments of function</p></div>
+
+<code class="signature" id="getGermanStr">public static  string <strong>getGermanStr</strong>(string string, bool both)</code>
+<div class="details">
+<p>get special characters of German</p></div>
+
+<code class="signature" id="getMicroString">public static  string <strong>getMicroString</strong>()</code>
+<div class="details">
+<p>get the time string
+include Micro time</p></div>
+
+<code class="signature" id="getMicroTime">public static  float <strong>getMicroTime</strong>()</code>
+<div class="details">
+<p>get current time
+include second and micro time</p></div>
+
+<code class="signature" id="getRand">public static  string <strong>getRand</strong>(int limit)</code>
+<div class="details">
+<p>get a string by rand, and not to be duplicated</p></div>
+
+<code class="signature" id="get_timezone_offset">public static  integer <strong>get_timezone_offset</strong>(string remote_tz:, string origin_tz:, str remote_tz, mixed origin_tz)</code>
+<div class="details">
+<p>Returns the offset from the origin timezone to the remote timezone, in seconds.</p><table>
+<tr><th>Parameters</th>
+<td>remote_tz: - default='GMT'(Greenwich Mean Time ),</td>
+<td>origin_tz: - If null the servers current timezone is used as the origin.</td>
+</tr></table>
+</div>
+
+<code class="signature" id="hasNumber">public static  bool <strong>hasNumber</strong>(string string)</code>
+<div class="details">
+<p>check if a string include number</p></div>
+
+<code class="signature" id="html2text">public static  mixed <strong>html2text</strong>(string encode, mixed str)</code>
+<div class="details">
+<p>change html to text string, filter the html tags</p></div>
+
+<code class="signature" id="in_array_imp">public static  bool <strong>in_array_imp</strong>(string needle, array haystack)</code>
+<div class="details">
+<p>to improve the function in_array of PHP</p></div>
+
+<code class="signature" id="isAjax">public static  bool <strong>isAjax</strong>()</code>
+<div class="details">
+<p>check if the request is Ajax</p></div>
+
+<code class="signature" id="isInclude">public static  bool <strong>isInclude</strong>(string|array source, string str_check)</code>
+<div class="details">
+<p>check the $source, if include $str_check</p></div>
+
+<code class="signature" id="jsonReturn">public static  void <strong>jsonReturn</strong>(int code, string message, array data, bool|true exit)</code>
+<div class="details">
+<p>return json data format</p></div>
+
+<code class="signature" id="multiexplode">public static  array <strong>multiexplode</strong>(array delimiters, string string)</code>
+<div class="details">
+<p>multi explode</p></div>
+
+<code class="signature" id="multineedle_stripos">public static  array <strong>multineedle_stripos</strong>(string haystack, array needles, integer offset)</code>
+<div class="details">
+<p>get needles position by array input</p><p>input multi needles by array</p></div>
+
+<code class="signature" id="passport_decrypt">public static  string <strong>passport_decrypt</strong>(string txt, string key)</code>
+<div class="details">
+<p>decipher the string by key</p></div>
+
+<code class="signature" id="passport_encrypt">public static  string <strong>passport_encrypt</strong>(string txt, string key)</code>
+<div class="details">
+<p>encrypt the string by key
+when you decipher the string, must use the key</p></div>
+
+<code class="signature" id="passport_key">public static  string <strong>passport_key</strong>(string txt, string encrypt_key)</code>
+<div class="details">
+<p>encypt the key into a string</p></div>
+
+<code class="signature" id="printM">public static  void <strong>printM</strong>(string|array var, bool isExit)</code>
+<div class="details">
+<p>format to print info
+$var can be string or array
+$isExit means if to exit from the code running, if true, exit.</p></div>
+
+<code class="signature" id="size_format">public static  string <strong>size_format</strong>(string string, integer decimal, string toFormat)</code>
+<div class="details">
+<p>size_format modifier plugin</p><p>changed in 2013-01-19</p><table>
+<tr><th>Parameters</th>
+<td></td>
+<td>decimal - the number of the end</td>
+<td>toFormat - can be 'B, KB, MB, GB, TB'</td>
+</tr></table>
+</div>
+
+<code class="signature" id="str2arr">public static  array <strong>str2arr</strong>(string string)</code>
+<div class="details">
+<p>convert string to array</p></div>
+
+<code class="signature" id="str_coder">public static  void <strong>str_coder</strong>(mixed str, str _type)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="stripDiskFileName">public static  bool <strong>stripDiskFileName</strong>(string name)</code>
+<div class="details">
+<p>strip the char can not include in disk file name.</p><table>
+<tr><th>Returns</th>
+<td>| string</td>
+</tr></table>
+</div>
+
+<code class="signature" id="stripslashes_deep">public static  string|array <strong>stripslashes_deep</strong>(string|array var)</code>
+<div class="details">
+<p>strip slashes of $var, include array</p></div>
+
+<code class="signature" id="strlen_real">public static  integer <strong>strlen_real</strong>(string str, string charset)</code>
+<div class="details">
+<p>get the real length of string, include chinese character</p></div>
+
+<p id="footer">This document was generated by <a href="http://peej.github.com/phpdoctor">PHPDoctor: The PHP Documentation Creator</a></p>
+
+</body>
+
+</html>

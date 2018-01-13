@@ -1,0 +1,36 @@
+
+body {
+    color: #333333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+	margin:0px;
+	padding:0px;
+	overflow:hidden;
+	background:#006699 url(../img/wallpaper/Blue-Sencha.jpg);
+}
+
+#aims-task-bar{
+height:20px;
+line-height:20px;
+bottom:0px;
+position:absolute;
+border-left:0px;
+border-right:0px;
+width:100%;
+}
+
+#aims-main{
+width:100%;
+height:100%;
+}
+#aims-task-menu{
+float:left;
+}
+
+#aims-task-tag{
+float:left;
+}
+#aims-task-info{
+float:right;
+}

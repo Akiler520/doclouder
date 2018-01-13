@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="PHPDoctor 2.0.5 (http://peej.github.com/phpdoctor/)">
+<meta name="when" content="Sat, 26 Mar 2016 06:21:41 +0000">
+
+<link rel="stylesheet" type="text/css" href="../stylesheet.css">
+<link rel="start" href="../namespaces.html">
+
+<title>AkUploader (PHPDoctor)</title>
+
+</head>
+<body id="definition">
+
+<header><h1>PHPDoctor: The PHP Documentation Creator</h1><span>Class</span>
+
+<h2>LIB-Ak\AkUploader</h2>
+
+</header><p class="signature">public  class <strong>AkUploader</strong></p>
+
+<div class="comment"><p>upload manager</p></div>
+
+<table>
+<tr><th>Author</th>
+<td>akiler <532171911@qq.com></td>
+</tr><tr><th>Copyright</th>
+<td>2010-2020</td>
+</tr><tr><th>Version</th>
+<td>1.0</td>
+</tr><tr><th>Since</th>
+<td>2010-09-29 14:06:12</td>
+</tr></table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td class="type"> bool</td>
+<td class="description"><p class="name"><a href="#FileTypeCheck()">FileTypeCheck</a>(string fileName)</p><p class="description">check file type if is allowed</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#__construct()">__construct</a>(array FileBar)</p><p class="description">construct the class
+$FileBar must not be $_FILES, but is the value of $_FILES, for instance: $_FILES['upfile']</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#fileCheck()">fileCheck</a>()</p></td>
+</tr>
+<tr>
+<td class="type"> 0=no</td>
+<td class="description"><p class="name"><a href="#getError()">getError</a>()</p><p class="description">get error message</p></td>
+</tr>
+<tr>
+<td class="type"> string</td>
+<td class="description"><p class="name"><a href="#getFileNameRand()">getFileNameRand</a>(str baseName)</p><p class="description">get the random string of file name
+use second and micosecond of current time.</p></td>
+</tr>
+<tr>
+<td class="type"> string</td>
+<td class="description"><p class="name"><a href="#getFileSuffix()">getFileSuffix</a>(string FileName)</p><p class="description">get the suffix of file
+not include '.'</p></td>
+</tr>
+<tr>
+<td class="type"> array</td>
+<td class="description"><p class="name"><a href="#getResult()">getResult</a>()</p><p class="description">get the result of upload</p></td>
+</tr>
+<tr>
+<td class="type"> string</td>
+<td class="description"><p class="name"><a href="#getSavePath()">getSavePath</a>()</p><p class="description">get the path of the file to save</p></td>
+</tr>
+<tr>
+<td class="type"> array</td>
+<td class="description"><p class="name"><a href="#getUpFileInfo()">getUpFileInfo</a>()</p><p class="description">get the information of upload file</p></td>
+</tr>
+<tr>
+<td class="type"> bool</td>
+<td class="description"><p class="name"><a href="#isError()">isError</a>(integer FileKey)</p><p class="description">check error by $FileKey, the $FileKey is the number of upload file, depends on $_FILES.</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setDirMakeRecursive()">setDirMakeRecursive</a>(bool key)</p><p class="description">if creat path Recursively.
+</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setError()">setError</a>(integer key, string msg)</p><p class="description">set error message when upload</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setFileNameRand()">setFileNameRand</a>(integer key)</p><p class="description">set if to creat the save name file by random</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setFileSaveName()">setFileSaveName</a>(string name)</p><p class="description">set the name to save</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setSaveFileNamePrefix()">setSaveFileNamePrefix</a>(string prefix)</p><p class="description">set the prefix of file to save</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setSavePath()">setSavePath</a>(string path)</p><p class="description">set path to save file</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setUpFileInfo()">setUpFileInfo</a>()</p><p class="description">set the information of upload file</p></td>
+</tr>
+<tr>
+<td class="type"> bool</td>
+<td class="description"><p class="name"><a href="#setUploadFileMaxSize()">setUploadFileMaxSize</a>(integer size)</p><p class="description">set the upload file size limit</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#uploadAll()">uploadAll</a>(int fileId)</p><p class="description">upload all files</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#uploadOne()">uploadOne</a>(integer key, string saveName)</p><p class="description">upload one file</p></td>
+</tr>
+</table>
+
+<h3>Details</h3>
+<code class="signature" id="FileTypeCheck">public  bool <strong>FileTypeCheck</strong>(string fileName)</code>
+<div class="details">
+<p>check file type if is allowed</p></div>
+
+<code class="signature" id="__construct">public  void <strong>__construct</strong>(array FileBar)</code>
+<div class="details">
+<p>construct the class
+$FileBar must not be $_FILES, but is the value of $_FILES, for instance: $_FILES['upfile']</p></div>
+
+<code class="signature" id="fileCheck">public  void <strong>fileCheck</strong>()</code>
+<div class="details">
+</div>
+
+<code class="signature" id="getError">public  0=no <strong>getError</strong>()</code>
+<div class="details">
+<p>get error message</p><table>
+<tr><th>Returns</th>
+<td>error, array=the array of message</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getFileNameRand">public  string <strong>getFileNameRand</strong>(str baseName)</code>
+<div class="details">
+<p>get the random string of file name
+use second and micosecond of current time.</p></div>
+
+<code class="signature" id="getFileSuffix">public  string <strong>getFileSuffix</strong>(string FileName)</code>
+<div class="details">
+<p>get the suffix of file
+not include '.'</p><table>
+<tr><th>Parameters</th>
+<td>FileName - file name</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getResult">public  array <strong>getResult</strong>()</code>
+<div class="details">
+<p>get the result of upload</p></div>
+
+<code class="signature" id="getSavePath">public  string <strong>getSavePath</strong>()</code>
+<div class="details">
+<p>get the path of the file to save</p></div>
+
+<code class="signature" id="getUpFileInfo">public  array <strong>getUpFileInfo</strong>()</code>
+<div class="details">
+<p>get the information of upload file</p></div>
+
+<code class="signature" id="isError">public  bool <strong>isError</strong>(integer FileKey)</code>
+<div class="details">
+<p>check error by $FileKey, the $FileKey is the number of upload file, depends on $_FILES.</p><table>
+<tr><th>Parameters</th>
+<td>FileKey - number of file in $_FILES.</td>
+</tr></table>
+</div>
+
+<code class="signature" id="setDirMakeRecursive">public  void <strong>setDirMakeRecursive</strong>(bool key)</code>
+<div class="details">
+<p>if creat path Recursively.
+true=yes，divide $key by '/', and creat them by grade.
+false=no，only creat one path</p></div>
+
+<code class="signature" id="setError">public  void <strong>setError</strong>(integer key, string msg)</code>
+<div class="details">
+<p>set error message when upload</p><table>
+<tr><th>Parameters</th>
+<td>key - the key of upload files</td>
+<td>msg - error message</td>
+</tr></table>
+</div>
+
+<code class="signature" id="setFileNameRand">public  void <strong>setFileNameRand</strong>(integer key)</code>
+<div class="details">
+<p>set if to creat the save name file by random</p><table>
+<tr><th>Parameters</th>
+<td>key - 1=random, 0=keep the old name(add file prefix)</td>
+</tr></table>
+</div>
+
+<code class="signature" id="setFileSaveName">public  void <strong>setFileSaveName</strong>(string name)</code>
+<div class="details">
+<p>set the name to save</p></div>
+
+<code class="signature" id="setSaveFileNamePrefix">public  void <strong>setSaveFileNamePrefix</strong>(string prefix)</code>
+<div class="details">
+<p>set the prefix of file to save</p><table>
+<tr><th>Parameters</th>
+<td>prefix - prefix name</td>
+</tr></table>
+</div>
+
+<code class="signature" id="setSavePath">public  void <strong>setSavePath</strong>(string path)</code>
+<div class="details">
+<p>set path to save file</p><table>
+<tr><th>Parameters</th>
+<td>path - path name</td>
+</tr></table>
+</div>
+
+<code class="signature" id="setUpFileInfo">public  void <strong>setUpFileInfo</strong>()</code>
+<div class="details">
+<p>set the information of upload file</p></div>
+
+<code class="signature" id="setUploadFileMaxSize">public  bool <strong>setUploadFileMaxSize</strong>(integer size)</code>
+<div class="details">
+<p>set the upload file size limit</p></div>
+
+<code class="signature" id="uploadAll">public  void <strong>uploadAll</strong>(int fileId)</code>
+<div class="details">
+<p>upload all files</p></div>
+
+<code class="signature" id="uploadOne">public  void <strong>uploadOne</strong>(integer key, string saveName)</code>
+<div class="details">
+<p>upload one file</p><table>
+<tr><th>Parameters</th>
+<td>key - the number of file in $_FILES</td>
+<td>saveName - if set it, then use it to be the file name to save(must include file suffix), if no, use random name.</td>
+</tr></table>
+</div>
+
+<p id="footer">This document was generated by <a href="http://peej.github.com/phpdoctor">PHPDoctor: The PHP Documentation Creator</a></p>
+
+</body>
+
+</html>

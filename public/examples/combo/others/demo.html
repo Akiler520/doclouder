@@ -1,0 +1,40 @@
+﻿<div>
+
+    <script type="text/javascript">
+        $(function () {
+            var required = false,
+                cc = $("#expamples-combo-other").combobox({
+                    width: 120,
+                    prompt: '请输入内容...',
+                    iconCls: 'icon-ok',
+                    editable: false,
+                    required: required,
+                    value: null
+                });
+
+            $("#expamples-combo-otherButton1").click(function () {
+                cc.combobox("setIcon", "icon-search");
+            });
+
+            $("#expamples-combo-otherButton2").click(function () {
+                cc.combobox("setRequired", required = !required).combobox("validate");
+            });
+
+            $("#expamples-combo-otherButton3").click(function () {
+                cc.combobox("setPrompt", "icon-search");
+            });
+        });
+    </script>
+
+    <h2>jEasyUI Combo Extensions</h2>
+    <p>该部分扩展由文件 jeasyui.extensions.combo.js 实现。</p>
+    <hr />
+    <input id="expamples-combo-otherButton1" type="button" value="设置图标" />
+    <input id="expamples-combo-otherButton2" type="button" value="设置 Required 值" />
+    <input id="expamples-combo-otherButton3" type="button" value="设置输入提示文字" />
+    <hr />
+    <select id="expamples-combo-other"></select>
+
+
+
+</div>

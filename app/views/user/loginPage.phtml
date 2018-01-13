@@ -1,0 +1,28 @@
+<div style="width: 360px; height: auto; margin: 20px 40px 8px 40px;">
+    <form action="" method="post" id="form-login">
+        <div style="margin-bottom:10px; color: #FF0000;">
+            {$_lang.unlogin_alert}
+        </div>
+        <div style="margin-bottom:10px">
+            <input class="easyui-validatebox" id="username" name="username" style="width:100%;height:30px;" data-options="prompt:'用户名称',iconCls:'icon-hamburg-user',iconWidth:38">
+        </div>
+        <div style="margin-bottom:20px">
+            <input class="easyui-validatebox" id="password" name="password" type="password" style="width:100%;height:30px;" data-options="prompt:'登录密码',iconCls:'icon-hamburg-lock',iconWidth:38">
+        </div>
+        <div style="margin-bottom:20px">
+            <select id="language" class="easyui-combobox" name="language" style="width:200px;">
+                <option value="en">English</option>
+                <option value="ch">中文</option>
+            </select>
+        </div>
+        <div style="margin-bottom:20px">
+            <input class="easyui-validatebox" type="text" id="verify" name="verify" style="width:50%;height:30px;" data-options="prompt:'验证码'">
+            <img id="img-verify-code" style="cursor: pointer; margin:0 0 0 3px ; vertical-align:middle; height:26px;" src="/User/verify" onclick="javascript:this.src='/User/verify/time/'+Math.random();" >
+        </div>
+        <div>
+            <a href="javascript:;" onclick="User.login();" class="easyui-linkbutton" data-options="iconCls:'icon-ok'" style="padding:5px 0px;">
+                <span style="font-size:14px;">登录/Login</span>
+            </a>
+        </div>
+    </form>
+</div>

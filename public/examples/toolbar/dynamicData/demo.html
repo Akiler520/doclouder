@@ -1,0 +1,90 @@
+﻿<div>
+    <script type="text/javascript">
+        $(function () {
+            var t = $("#examples-toolbar-dynamicData-tt1");
+            t.toolbar({
+                method: "get",
+                url: "/Public/examples/toolbar/toolbar-data.json",
+                onResize: function (width, height) { },
+                onLoadSuccess: function (data) { },
+                onLoadError: $.easyui.ajaxError(),
+                onBeforeLoad: function (param) { }
+            });
+
+            $("#examples-toolbar-dynamicData-tt2").toolbar({
+                data: [
+                    { type: "button", options: { text: "保存", iconCls: "icon-save" } }, "-",
+                    { type: "button", options: { text: "刷新", iconCls: "icon-reload" } }, "-",
+                    { type: "combobox", options: { valueField: "id", textField: "text", width: 140 } }
+                ]
+            });
+
+
+            $("#examples-toolbar-dynamicData-btn1").click(function () { t.toolbar("enable"); });
+
+            $("#examples-toolbar-dynamicData-btn2").click(function () { t.toolbar("disable"); });
+
+            $("#examples-toolbar-dynamicData-btn3").click(function () { t.toolbar("enableItem", 1); });
+
+            $("#examples-toolbar-dynamicData-btn4").click(function () { t.toolbar("disableItem", 1); });
+
+            $("#examples-toolbar-dynamicData-btn5").click(function () {
+                t.toolbar("loadData", [
+                    { "type": "label", "options": { "text": "学号：" } },
+                    { "type": "textbox", "id": "userName", "options": { "width": 100 } },
+                    "姓名：",
+                    { "type": "textbox", "id": "password", "options": { "width": 100 } },
+                    "-",
+                    "年龄：",
+                    { "type": "numberspinner", "options": { "width": 100, "value": 20, "min": 10, "max": 30, "disabled": true } }
+                ]);
+            });
+
+            $("#examples-toolbar-dynamicData-btn6").click(function () { t.toolbar("load"); });
+
+            $("#examples-toolbar-dynamicData-btn7").click(function () { t.toolbar("setItemFocus", 0); });
+
+            $("#examples-toolbar-dynamicData-btn8").click(function () { t.toolbar("setItemFocus", 1); });
+
+            $("#examples-toolbar-dynamicData-btn9").click(function () { t.toolbar("setItemFocus", 8); });
+
+            $("#examples-toolbar-dynamicData-btn10").click(function () { t.toolbar("setItemFocus", 9); });
+        });
+    </script>
+
+    <h2>jEasyUI ToolBar Plugin Extensions - 动态数据加载</h2>
+    <p>该部分扩展由文件 jquery.toolbar.js 实现。</p>
+    <hr />
+    <input id="examples-toolbar-dynamicData-btn1" type="button" value="enable 全部" />
+    <input id="examples-toolbar-dynamicData-btn2" type="button" value="disable 全部" />
+    <input id="examples-toolbar-dynamicData-btn3" type="button" value="enable 用户名输入框" />
+    <input id="examples-toolbar-dynamicData-btn4" type="button" value="disable 用户名输入框" />
+    <input id="examples-toolbar-dynamicData-btn5" type="button" value="重新加载数据" />
+    <input id="examples-toolbar-dynamicData-btn6" type="button" value="重新加载远程数据" />
+    <hr />
+    <input id="examples-toolbar-dynamicData-btn7" type="button" value="setItemFocus 0" />
+    <input id="examples-toolbar-dynamicData-btn8" type="button" value="setItemFocus 1" />
+    <input id="examples-toolbar-dynamicData-btn9" type="button" value="setItemFocus 8" />
+    <input id="examples-toolbar-dynamicData-btn10" type="button" value="setItemFocus 9" />
+    <hr />
+    <div id="examples-toolbar-dynamicData-tt1"></div>
+    <br /><br />
+    <div class="easyui-toolbar">
+        <input class="easyui-validatebox" data-options="prompt: '拟定企业名称'" style="width: 100px;" />
+        <span>-</span>
+        <input class="easyui-validatebox" data-options="prompt: '企业类型'" style="width: 100px;" />
+        <span>-</span>
+        <input class="easyui-validatebox" data-options="prompt: '法人'" style="width: 100px;" />
+        <span>-</span>
+        <input class="easyui-datebox" data-options="prompt: '核查有效期', width: 100" />
+        <span>-</span>
+        <label>
+            <input type="checkbox" />
+            <span>选择我</span>
+        </label>
+        <span>-</span>
+        <span>asdfasdfasdf</span>
+    </div>
+    <br /><br />
+    <div id="examples-toolbar-dynamicData-tt2"></div>
+</div>

@@ -1,0 +1,12 @@
+########### akiler 2016.1.27 ################
+
+CREATE TABLE `dms_language` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `key` varchar(100) DEFAULT NULL COMMENT 'key of language',
+  `language` varchar(100) DEFAULT NULL COMMENT 'language string',
+  `type` varchar(20) DEFAULT NULL COMMENT 'type of language: en,ch',
+  `status` tinyint(1) DEFAULT '1' COMMENT '1=in use,0=not use',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+########### akiler 2016.1.27 end ################

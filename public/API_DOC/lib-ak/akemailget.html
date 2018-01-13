@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="PHPDoctor 2.0.5 (http://peej.github.com/phpdoctor/)">
+<meta name="when" content="Sat, 26 Mar 2016 06:21:36 +0000">
+
+<link rel="stylesheet" type="text/css" href="../stylesheet.css">
+<link rel="start" href="../namespaces.html">
+
+<title>AkEmailGet (PHPDoctor)</title>
+
+</head>
+<body id="definition">
+
+<header><h1>PHPDoctor: The PHP Documentation Creator</h1><span>Class</span>
+
+<h2>LIB-Ak\AkEmailGet</h2>
+
+</header><p class="signature">public  class <strong>AkEmailGet</strong></p>
+
+<div class="comment"><p>get email in client</p></div>
+
+<table>
+<tr><th>Author</th>
+<td>akiler <532171911@qq.com></td>
+</tr><tr><th>Copyright</th>
+<td>2010-2013</td>
+</tr><tr><th>Version</th>
+<td>1.0</td>
+</tr><tr><th>Since</th>
+<td>2013-02-19</td>
+</tr></table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#__construct()">__construct</a>(string host, string username, string password, string emailAddress, string serviceType, integer port, bool ssl)</p><p class="description">init class</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#closeMail()">closeMail</a>(integer flag)</p><p class="description">Close an IMAP stream
+If set $flag to CL_EXPUNGE, the function will silently expunge the mailbox before closing,
+removing all messages marked for deletion. </p></td>
+</tr>
+<tr>
+<td class="type"> resource|bool</td>
+<td class="description"><p class="name"><a href="#connect()">connect</a>()</p><p class="description">Open an IMAP stream to a mailbox</p></td>
+</tr>
+<tr>
+<td class="type"> string</td>
+<td class="description"><p class="name"><a href="#decodeMimeString()">decodeMimeString</a>(string mimeStr, string inputCharset, string targetCharset, string fallbackCharset)</p><p class="description">Receive a string with a mail header and returns it
+decoded to a specified charset.
+</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#downAttach()">downAttach</a>(string filePath, string message, string name)</p><p class="description">download the attach of the mail to localhost</p></td>
+</tr>
+<tr>
+<td class="type"> array</td>
+<td class="description"><p class="name"><a href="#getAttach()">getAttach</a>(string msgCount, string path)</p><p class="description">get attach of the message</p></td>
+</tr>
+<tr>
+<td class="type"> string</td>
+<td class="description"><p class="name"><a href="#getBody()">getBody</a>(string msgCount)</p><p class="description">get the body of the message</p></td>
+</tr>
+<tr>
+<td class="type"> string</td>
+<td class="description"><p class="name"><a href="#headerStringDecode()">headerStringDecode</a>(string headerString)</p><p class="description">can decode all kinds of language for email string
+xxx: some error happen, I don't know why</p></td>
+</tr>
+<tr>
+<td class="type"> array</td>
+<td class="description"><p class="name"><a href="#mailHeader()">mailHeader</a>(string msgCount)</p><p class="description">Read the header of the message</p></td>
+</tr>
+<tr>
+<td class="type"> object|bool</td>
+<td class="description"><p class="name"><a href="#mailInfo()">mailInfo</a>()</p><p class="description">Get information about the current mailbox</p></td>
+</tr>
+<tr>
+<td class="type"> array</td>
+<td class="description"><p class="name"><a href="#mailList()">mailList</a>(string msgRange)</p><p class="description">Read an overview of the information in the headers of the given message</p></td>
+</tr>
+<tr>
+<td class="type"> bool</td>
+<td class="description"><p class="name"><a href="#mailRead()">mailRead</a>(string msgCount)</p><p class="description">put the message from unread to read</p></td>
+</tr>
+<tr>
+<td class="type"> int</td>
+<td class="description"><p class="name"><a href="#mailTotalCount()">mailTotalCount</a>()</p><p class="description">get the total count of the current mailbox</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#markMailDelete()">markMailDelete</a>(string msgCount)</p><p class="description">Marks messages listed in msg_number for deletion. </p></td>
+</tr>
+<tr>
+<td class="type"> array</td>
+<td class="description"><p class="name"><a href="#mb_list_lowerencodings()">mb_list_lowerencodings</a>()</p><p class="description">return supported encodings in lowercase.</p></td>
+</tr>
+<tr>
+<td class="type"> sting</td>
+<td class="description"><p class="name"><a href="#subjectDecode()">subjectDecode</a>(string subject)</p><p class="description">decode the subject of chinese</p></td>
+</tr>
+</table>
+
+<h3>Details</h3>
+<code class="signature" id="__construct">public  void <strong>__construct</strong>(string host, string username, string password, string emailAddress, string serviceType, integer port, bool ssl)</code>
+<div class="details">
+<p>init class</p><table>
+<tr><th>Parameters</th>
+<td>host - the mail server address</td>
+<td>username - the username to login</td>
+<td>password - the password</td>
+<td>emailAddress - the email address of the user</td>
+<td>serviceType - the type of the email service</td>
+<td>port - the port of the mail server</td>
+<td>ssl - if use ssl, default is false</td>
+</tr></table>
+</div>
+
+<code class="signature" id="closeMail">public  void <strong>closeMail</strong>(integer flag)</code>
+<div class="details">
+<p>Close an IMAP stream
+If set $flag to CL_EXPUNGE, the function will silently expunge the mailbox before closing,
+removing all messages marked for deletion. You can achieve the same thing by using imap_expunge()
+and yon can set $flag to 0, only close the stream</p></div>
+
+<code class="signature" id="connect">public  resource|bool <strong>connect</strong>()</code>
+<div class="details">
+<p>Open an IMAP stream to a mailbox</p></div>
+
+<code class="signature" id="decodeMimeString">public  string <strong>decodeMimeString</strong>(string mimeStr, string inputCharset, string targetCharset, string fallbackCharset)</code>
+<div class="details">
+<p>Receive a string with a mail header and returns it
+decoded to a specified charset.
+If the charset specified into a piece of text from header
+isn't supported by "mb", the "fallbackCharset" will be
+used to try to decode it.</p></div>
+
+<code class="signature" id="downAttach">public  void <strong>downAttach</strong>(string filePath, string message, string name)</code>
+<div class="details">
+<p>download the attach of the mail to localhost</p></div>
+
+<code class="signature" id="getAttach">public  array <strong>getAttach</strong>(string msgCount, string path)</code>
+<div class="details">
+<p>get attach of the message</p></div>
+
+<code class="signature" id="getBody">public  string <strong>getBody</strong>(string msgCount)</code>
+<div class="details">
+<p>get the body of the message</p></div>
+
+<code class="signature" id="headerStringDecode">public  string <strong>headerStringDecode</strong>(string headerString)</code>
+<div class="details">
+<p>can decode all kinds of language for email string
+xxx: some error happen, I don't know why</p></div>
+
+<code class="signature" id="mailHeader">public  array <strong>mailHeader</strong>(string msgCount)</code>
+<div class="details">
+<p>Read the header of the message</p></div>
+
+<code class="signature" id="mailInfo">public  object|bool <strong>mailInfo</strong>()</code>
+<div class="details">
+<p>Get information about the current mailbox</p></div>
+
+<code class="signature" id="mailList">public  array <strong>mailList</strong>(string msgRange)</code>
+<div class="details">
+<p>Read an overview of the information in the headers of the given message</p></div>
+
+<code class="signature" id="mailRead">public  bool <strong>mailRead</strong>(string msgCount)</code>
+<div class="details">
+<p>put the message from unread to read</p></div>
+
+<code class="signature" id="mailTotalCount">public  int <strong>mailTotalCount</strong>()</code>
+<div class="details">
+<p>get the total count of the current mailbox</p></div>
+
+<code class="signature" id="markMailDelete">public  void <strong>markMailDelete</strong>(string msgCount)</code>
+<div class="details">
+<p>Marks messages listed in msg_number for deletion.
+Messages marked for deletion will stay in the mailbox until either imap_expunge() is called
+or imap_close() is called with the optional parameter CL_EXPUNGE.</p></div>
+
+<code class="signature" id="mb_list_lowerencodings">public  array <strong>mb_list_lowerencodings</strong>()</code>
+<div class="details">
+<p>return supported encodings in lowercase.</p></div>
+
+<code class="signature" id="subjectDecode">public  sting <strong>subjectDecode</strong>(string subject)</code>
+<div class="details">
+<p>decode the subject of chinese</p></div>
+
+<p id="footer">This document was generated by <a href="http://peej.github.com/phpdoctor">PHPDoctor: The PHP Documentation Creator</a></p>
+
+</body>
+
+</html>

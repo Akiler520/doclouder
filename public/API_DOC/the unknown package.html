@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="PHPDoctor 2.0.5 (http://peej.github.com/phpdoctor/)">
+<meta name="when" content="Sat, 26 Mar 2016 06:21:31 +0000">
+
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link rel="start" href="namespaces.html">
+
+<title>The Unknown Package (PHPDoctor)</title>
+
+</head>
+<body id="namespace">
+
+<header><h1>PHPDoctor: The PHP Documentation Creator</h1><span>Namespace</span>
+
+<h2>The Unknown Package</h2>
+
+</header><table>
+<tr><td><a href="the unknown package/btnode.html">BTNode</a></td><td>二叉树的创建及基本操作1.构造方法,初始化建立二叉树
+2.按先序遍历方式建立二叉树
+3.按先序遍历二叉树
+4.先序遍历的非递归算法
+5.中序遍历二叉树
+6.中序遍历的非递归算法
+7.后序遍历二叉树
+8.后序遍历非递归算法
+9.层次遍历二叉树
+10.求二叉树叶子结点的个数
+11.求二叉树的深度
+12.判断二叉树是否为空树
+13.置空二叉树</td></tr>
+<tr><td><a href="the unknown package/binarytree.html">BinaryTree</a></td><td></td></tr>
+<tr><td><a href="the unknown package/lnode.html">LNode</a></td><td>栈的链式储存表示和栈的基本操作1.初始化栈 __construct()
+2.判断栈是否空栈 getIsEmpty()
+3.将所有元素出栈 getAllPopStack()
+4.返回栈内元素个数 getLength()
+5.元素进栈 getPushStack()
+6.元素出栈 getPopStack()
+7.仅返回栈内所有元素 getAllElem()*8.返回栈内某个元素的个数 getCountForElem()</td></tr>
+<tr><td><a href="the unknown package/productbusiness.html">ProductBusiness</a></td><td></td></tr>
+<tr><td><a href="the unknown package/qlnode.html">QLNode</a></td><td>队列的链式存储和队列的基本操作
+1.初始化队列
+2.链队列的入队操作
+3.链队列的出队操作
+4.仅返回队列中的全部元素
+5.返回队列元素个数
+6.判断队列是否为空
+7.将所有元素出队列</td></tr>
+<tr><td><a href="the unknown package/queuelinked.html">QueueLinked</a></td><td></td></tr>
+<tr><td><a href="the unknown package/stacklinked.html">StackLinked</a></td><td></td></tr>
+<tr><td><a href="the unknown package/uploader.html">Uploader</a></td><td>Created by JetBrains PhpStorm.
+</td></tr>
+</table>
+
+<h3>Globals</h3>
+<table>
+<tr>
+<td class="type">final  bool</td>
+<td class="description"><p class="name"><a href="#DEBUG">DEBUG</a></p></td>
+</tr>
+<tr>
+<td class="type">final  bool</td>
+<td class="description"><p class="name"><a href="#IS_TEST">IS_TEST</a></p></td>
+</tr>
+<tr>
+<td class="type">final  mixed</td>
+<td class="description"><p class="name"><a href="#ROOT_PATH">ROOT_PATH</a></p></td>
+</tr>
+<tr>
+<td class="type">final  mixed</td>
+<td class="description"><p class="name"><a href="#RUNTIME_PATH">RUNTIME_PATH</a></p></td>
+</tr>
+<tr>
+<td class="type">final  mixed</td>
+<td class="description"><p class="name"><a href="#LIB_PATH">LIB_PATH</a></p></td>
+</tr>
+<tr>
+<td class="type">final  mixed</td>
+<td class="description"><p class="name"><a href="#CACHE_PATH">CACHE_PATH</a></p></td>
+</tr>
+<tr>
+<td class="type">final  mixed</td>
+<td class="description"><p class="name"><a href="#LOG_PATH">LOG_PATH</a></p></td>
+</tr>
+<tr>
+<td class="type">final  mixed</td>
+<td class="description"><p class="name"><a href="#LOG_DB_PATH">LOG_DB_PATH</a></p></td>
+</tr>
+<tr>
+<td class="type">final  str</td>
+<td class="description"><p class="name"><a href="#VIEW_ENGINE">VIEW_ENGINE</a></p></td>
+</tr>
+<tr>
+<td class="type">final  str</td>
+<td class="description"><p class="name"><a href="#VIEW_TEMP">VIEW_TEMP</a></p></td>
+</tr>
+<tr>
+<td class="type">final  mixed</td>
+<td class="description"><p class="name"><a href="#CACHE_SMARTY_DIR">CACHE_SMARTY_DIR</a></p></td>
+</tr>
+<tr>
+<td class="type">final  mixed</td>
+<td class="description"><p class="name"><a href="#UPLOAD_PATH">UPLOAD_PATH</a></p></td>
+</tr>
+<tr>
+<td class="type">final  mixed</td>
+<td class="description"><p class="name"><a href="#ASSET_DIR">ASSET_DIR</a></p></td>
+</tr>
+<tr>
+<td class="type">final  str</td>
+<td class="description"><p class="name"><a href="#EXTENSION">EXTENSION</a></p></td>
+</tr>
+<tr>
+<td class="type">final  str</td>
+<td class="description"><p class="name"><a href="#VERSION">VERSION</a></p></td>
+</tr>
+<tr>
+<td class="type">final  mixed</td>
+<td class="description"><p class="name"><a href="#UTF32_BIG_ENDIAN_BOM">UTF32_BIG_ENDIAN_BOM</a></p></td>
+</tr>
+<tr>
+<td class="type">final  mixed</td>
+<td class="description"><p class="name"><a href="#UTF32_LITTLE_ENDIAN_BOM">UTF32_LITTLE_ENDIAN_BOM</a></p></td>
+</tr>
+<tr>
+<td class="type">final  mixed</td>
+<td class="description"><p class="name"><a href="#UTF16_BIG_ENDIAN_BOM">UTF16_BIG_ENDIAN_BOM</a></p></td>
+</tr>
+<tr>
+<td class="type">final  mixed</td>
+<td class="description"><p class="name"><a href="#UTF16_LITTLE_ENDIAN_BOM">UTF16_LITTLE_ENDIAN_BOM</a></p></td>
+</tr>
+<tr>
+<td class="type">final  mixed</td>
+<td class="description"><p class="name"><a href="#UTF8_BOM">UTF8_BOM</a></p></td>
+</tr>
+<tr>
+<td class="type">final  int</td>
+<td class="description"><p class="name"><a href="#FILE_READ_LEN">FILE_READ_LEN</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#_FILES">$_FILES</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#_REQUEST">$_REQUEST</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#output">$output</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#pdf">$pdf</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#uploadfile">$uploadfile</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#uploaddir">$uploaddir</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#userfile">$userfile</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#psfile">$psfile</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#file">$file</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#command">$command</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#url">$url</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#uri">$uri</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#delim">$delim</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#docfile">$docfile</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#safe">$safe</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#AkObject">$AkObject</a></p></td>
+</tr>
+<tr>
+<td class="type"> Exception</td>
+<td class="description"><p class="name"><a href="#e">$e</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#exceptionManager">$exceptionManager</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#targetFolder">$targetFolder</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#_SERVER">$_SERVER</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#timestamp">$timestamp</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#verifyToken">$verifyToken</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#_POST">$_POST</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#current_time">$current_time</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#current_day">$current_day</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#targetPath">$targetPath</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#targetFile">$targetFile</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#fileTypes">$fileTypes</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#fileParts">$fileParts</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#attachDir">$attachDir</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#dirType">$dirType</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#maxAttachSize">$maxAttachSize</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#upExt">$upExt</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#arrUrls">$arrUrls</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#urlCount">$urlCount</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#i">$i</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#localUrl">$localUrl</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#magicQ">$magicQ</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#sHtml">$sHtml</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#inputName">$inputName</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#msgType">$msgType</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#immediate">$immediate</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#_GET">$_GET</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#err">$err</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#msg">$msg</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#tempPath">$tempPath</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#localName">$localName</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#info">$info</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#upfile">$upfile</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#extension">$extension</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#fileInfo">$fileInfo</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#bytes">$bytes</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#attachSubDir">$attachSubDir</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#newFilename">$newFilename</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#content">$content</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#config">$config</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#Path">$Path</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#up">$up</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#type">$type</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#editorId">$editorId</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#random">$random</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#targetDir">$targetDir</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#uploadDir">$uploadDir</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#cleanupTargetDir">$cleanupTargetDir</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#maxFileAge">$maxFileAge</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#fileName">$fileName</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#md5File">$md5File</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#filePath">$filePath</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#uploadPath">$uploadPath</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#chunk">$chunk</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#chunks">$chunks</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#dir">$dir</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#tmpfilePath">$tmpfilePath</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#out">$out</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#in">$in</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#buff">$buff</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#index">$index</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#done">$done</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#DIR">$DIR</a></p><p class="description">此页面用来协助 IE6/7 预览图片，因为 IE 6/7 不支持 base64</p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#src">$src</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#previewUrl">$previewUrl</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#base64">$base64</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#matches">$matches</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#filename">$filename</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#data">$data</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#_smarty_tpl">$_smarty_tpl</a></p></td>
+</tr>
+</table>
+
+<h3>Functions</h3>
+<table>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#print_form()">print_form</a>()</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#saveRemoteImg()">saveRemoteImg</a>(mixed sUrl)</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#getUrl()">getUrl</a>(mixed sUrl, int jumpNums)</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#getLocalPath()">getLocalPath</a>(mixed sExt)</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#fixPre()">fixPre</a>(mixed match)</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#showCode()">showCode</a>(mixed match)</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#showFlv()">showFlv</a>(mixed match)</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#jsonString()">jsonString</a>(mixed str)</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#formatBytes()">formatBytes</a>(mixed bytes)</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#ubb2html()">ubb2html</a>(mixed sUBB)</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#mymd5()">mymd5</a>(mixed file)</p></td>
+</tr>
+</table>
+
+<h3>Details</h3>
+<code class="signature" id="DEBUG">public final  bool <strong>DEBUG</strong> = true</code>
+<div class="details">
+</div>
+
+<code class="signature" id="IS_TEST">public final  bool <strong>IS_TEST</strong> = true</code>
+<div class="details">
+</div>
+
+<code class="signature" id="ROOT_PATH">public final  mixed <strong>ROOT_PATH</strong> = $_SERVER[&quot;DOCUMENT_ROOT&quot;] . &quot;/&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="RUNTIME_PATH">public final  mixed <strong>RUNTIME_PATH</strong> = ROOT_PATH . &quot;runtime/&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="LIB_PATH">public final  mixed <strong>LIB_PATH</strong> = ROOT_PATH . &quot;library/&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="CACHE_PATH">public final  mixed <strong>CACHE_PATH</strong> = RUNTIME_PATH . &quot;cache/&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="LOG_PATH">public final  mixed <strong>LOG_PATH</strong> = RUNTIME_PATH . &quot;log/&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="LOG_DB_PATH">public final  mixed <strong>LOG_DB_PATH</strong> = LOG_PATH . &quot;db/&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="VIEW_ENGINE">public final  str <strong>VIEW_ENGINE</strong> = &quot;SmartyManager&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="VIEW_TEMP">public final  str <strong>VIEW_TEMP</strong> = &quot;.phtml&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="CACHE_SMARTY_DIR">public final  mixed <strong>CACHE_SMARTY_DIR</strong> = CACHE_PATH . &quot;smarty/&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="UPLOAD_PATH">public final  mixed <strong>UPLOAD_PATH</strong> = ROOT_PATH . &quot;public/storage/&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="ASSET_DIR">public final  mixed <strong>ASSET_DIR</strong> = ROOT_PATH . &quot;public/asset/&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="EXTENSION">public final  str <strong>EXTENSION</strong> = &quot;.php&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="VERSION">public final  str <strong>VERSION</strong> = &quot;1.0.1&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="UTF32_BIG_ENDIAN_BOM">public final  mixed <strong>UTF32_BIG_ENDIAN_BOM</strong> = chr(0x00</code>
+<div class="details">
+</div>
+
+<code class="signature" id="UTF32_LITTLE_ENDIAN_BOM">public final  mixed <strong>UTF32_LITTLE_ENDIAN_BOM</strong> = chr(0xFF</code>
+<div class="details">
+</div>
+
+<code class="signature" id="UTF16_BIG_ENDIAN_BOM">public final  mixed <strong>UTF16_BIG_ENDIAN_BOM</strong> = chr(0xFE</code>
+<div class="details">
+</div>
+
+<code class="signature" id="UTF16_LITTLE_ENDIAN_BOM">public final  mixed <strong>UTF16_LITTLE_ENDIAN_BOM</strong> = chr(0xFF</code>
+<div class="details">
+</div>
+
+<code class="signature" id="UTF8_BOM">public final  mixed <strong>UTF8_BOM</strong> = chr(0xEF</code>
+<div class="details">
+</div>
+
+<code class="signature" id="FILE_READ_LEN">public final  int <strong>FILE_READ_LEN</strong> = 4096</code>
+<div class="details">
+</div>
+
+<code class="signature" id="_FILES">public  mixed <strong>$_FILES</strong></code>
+<div class="details">
+</div>
+
+<code class="signature" id="_REQUEST">public  mixed <strong>$_REQUEST</strong> = escapeshellcmd(&quot;-p $_REQUEST[paper]&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="output">public  mixed <strong>$output</strong> = escapeshellcmd(&quot;-a $_REQUEST[paper]&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="pdf">public  mixed <strong>$pdf</strong> = 1</code>
+<div class="details">
+</div>
+
+<code class="signature" id="uploadfile">public  mixed <strong>$uploadfile</strong> = $uploaddir . $_FILES['userfile']['name']</code>
+<div class="details">
+</div>
+
+<code class="signature" id="uploaddir">public  mixed <strong>$uploaddir</strong></code>
+<div class="details">
+</div>
+
+<code class="signature" id="userfile">public  mixed <strong>$userfile</strong> = $_FILES['userfile']['name']</code>
+<div class="details">
+</div>
+
+<code class="signature" id="psfile">public  mixed <strong>$psfile</strong></code>
+<div class="details">
+</div>
+
+<code class="signature" id="file">public  mixed <strong>$file</strong> = escapeshellcmd($uploadfile</code>
+<div class="details">
+</div>
+
+<code class="signature" id="command">public  mixed <strong>$command</strong> = &quot;antiword $output $file&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="url">public  mixed <strong>$url</strong> = $_REQUEST['url']</code>
+<div class="details">
+</div>
+
+<code class="signature" id="uri">public  mixed <strong>$uri</strong> = escapeshellcmd($_REQUEST['url']</code>
+<div class="details">
+</div>
+
+<code class="signature" id="delim">public  mixed <strong>$delim</strong> = &quot;/&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="docfile">public  mixed <strong>$docfile</strong> = explode($delim</code>
+<div class="details">
+</div>
+
+<code class="signature" id="safe">public  mixed <strong>$safe</strong> = escapeshellcmd($docfile</code>
+<div class="details">
+</div>
+
+<code class="signature" id="AkObject">public  mixed <strong>$AkObject</strong> = new AkInit</code>
+<div class="details">
+</div>
+
+<code class="signature" id="e">public  Exception <strong>$e</strong> = new ExceptionManager($e</code>
+<div class="details">
+</div>
+
+<code class="signature" id="exceptionManager">public  mixed <strong>$exceptionManager</strong></code>
+<div class="details">
+</div>
+
+<code class="signature" id="targetFolder">public  mixed <strong>$targetFolder</strong> = '/uploads'</code>
+<div class="details">
+</div>
+
+<code class="signature" id="_SERVER">public  mixed <strong>$_SERVER</strong></code>
+<div class="details">
+</div>
+
+<code class="signature" id="timestamp">public  mixed <strong>$timestamp</strong> = time</code>
+<div class="details">
+</div>
+
+<code class="signature" id="verifyToken">public  mixed <strong>$verifyToken</strong> = md5('unique_salt' . $_POST['timestamp']</code>
+<div class="details">
+</div>
+
+<code class="signature" id="_POST">public  mixed <strong>$_POST</strong></code>
+<div class="details">
+</div>
+
+<code class="signature" id="current_time">public  mixed <strong>$current_time</strong> = time</code>
+<div class="details">
+</div>
+
+<code class="signature" id="current_day">public  mixed <strong>$current_day</strong> = date('Y-m-d'</code>
+<div class="details">
+</div>
+
+<code class="signature" id="targetPath">public  mixed <strong>$targetPath</strong> = $_SERVER['DOCUMENT_ROOT'] . $targetFolder</code>
+<div class="details">
+</div>
+
+<code class="signature" id="targetFile">public  mixed <strong>$targetFile</strong> = rtrim($targetPath</code>
+<div class="details">
+</div>
+
+<code class="signature" id="fileTypes">public  mixed <strong>$fileTypes</strong> = array('jpg'</code>
+<div class="details">
+</div>
+
+<code class="signature" id="fileParts">public  mixed <strong>$fileParts</strong> = pathinfo($_FILES['Filedata']['name']</code>
+<div class="details">
+</div>
+
+<code class="signature" id="attachDir">public  mixed <strong>$attachDir</strong> = 'upload'</code>
+<div class="details">
+</div>
+
+<code class="signature" id="dirType">public  mixed <strong>$dirType</strong> = 1</code>
+<div class="details">
+</div>
+
+<code class="signature" id="maxAttachSize">public  mixed <strong>$maxAttachSize</strong> = 2097152</code>
+<div class="details">
+</div>
+
+<code class="signature" id="upExt">public  mixed <strong>$upExt</strong> = &quot;jpg,jpeg,gif,png&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="arrUrls">public  mixed <strong>$arrUrls</strong> = explode('|'</code>
+<div class="details">
+</div>
+
+<code class="signature" id="urlCount">public  mixed <strong>$urlCount</strong> = count($arrUrls</code>
+<div class="details">
+</div>
+
+<code class="signature" id="i">public  mixed <strong>$i</strong> = 0</code>
+<div class="details">
+</div>
+
+<code class="signature" id="localUrl">public  mixed <strong>$localUrl</strong> = $localUrl</code>
+<div class="details">
+</div>
+
+<code class="signature" id="magicQ">public  mixed <strong>$magicQ</strong> = get_magic_quotes_gpc</code>
+<div class="details">
+</div>
+
+<code class="signature" id="sHtml">public  mixed <strong>$sHtml</strong> = $_POST['elm1']</code>
+<div class="details">
+</div>
+
+<code class="signature" id="inputName">public  mixed <strong>$inputName</strong> = 'filedata'</code>
+<div class="details">
+</div>
+
+<code class="signature" id="msgType">public  mixed <strong>$msgType</strong> = 2</code>
+<div class="details">
+</div>
+
+<code class="signature" id="immediate">public  mixed <strong>$immediate</strong> = isset($_GET['immediate']</code>
+<div class="details">
+</div>
+
+<code class="signature" id="_GET">public  mixed <strong>$_GET</strong></code>
+<div class="details">
+</div>
+
+<code class="signature" id="err">public  mixed <strong>$err</strong> = &quot;&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="msg">public  mixed <strong>$msg</strong> = &quot;''&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="tempPath">public  mixed <strong>$tempPath</strong> = $attachDir.'/'.date(&quot;YmdHis&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="localName">public  mixed <strong>$localName</strong> = ''</code>
+<div class="details">
+</div>
+
+<code class="signature" id="info">public  mixed <strong>$info</strong></code>
+<div class="details">
+</div>
+
+<code class="signature" id="upfile">public  mixed <strong>$upfile</strong> = @$_FILES[$inputName]</code>
+<div class="details">
+</div>
+
+<code class="signature" id="extension">public  mixed <strong>$extension</strong> = $fileInfo['extension']</code>
+<div class="details">
+</div>
+
+<code class="signature" id="fileInfo">public  mixed <strong>$fileInfo</strong></code>
+<div class="details">
+</div>
+
+<code class="signature" id="bytes">public  mixed <strong>$bytes</strong> = '请不要上传大小超过'.formatBytes($maxAttachSize</code>
+<div class="details">
+</div>
+
+<code class="signature" id="attachSubDir">public  mixed <strong>$attachSubDir</strong> = 'month_'.date('ym'</code>
+<div class="details">
+</div>
+
+<code class="signature" id="newFilename">public  mixed <strong>$newFilename</strong> = date(&quot;YmdHis&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="content">public  mixed <strong>$content</strong> = htmlspecialchars(stripslashes($_POST['myEditor']</code>
+<div class="details">
+</div>
+
+<code class="signature" id="config">public  mixed <strong>$config</strong> = array(
+        &quot;savePath&quot; =&gt; &quot;upload/&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="Path">public  mixed <strong>$Path</strong> = $_SERVER['DOCUMENT_ROOT'].&quot;/Public/storage/upload/&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="up">public  mixed <strong>$up</strong> = new Uploader( &quot;upfile&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="type">public  mixed <strong>$type</strong> = $_REQUEST['type']</code>
+<div class="details">
+</div>
+
+<code class="signature" id="editorId">public  mixed <strong>$editorId</strong> = $_GET['editorid']</code>
+<div class="details">
+</div>
+
+<code class="signature" id="random">public  mixed <strong>$random</strong></code>
+<div class="details">
+</div>
+
+<code class="signature" id="targetDir">public  mixed <strong>$targetDir</strong> = 'upload_tmp'</code>
+<div class="details">
+</div>
+
+<code class="signature" id="uploadDir">public  mixed <strong>$uploadDir</strong> = 'upload'</code>
+<div class="details">
+</div>
+
+<code class="signature" id="cleanupTargetDir">public  mixed <strong>$cleanupTargetDir</strong> = true</code>
+<div class="details">
+</div>
+
+<code class="signature" id="maxFileAge">public  mixed <strong>$maxFileAge</strong> = 5 * 3600</code>
+<div class="details">
+</div>
+
+<code class="signature" id="fileName">public  mixed <strong>$fileName</strong> = uniqid(&quot;file_&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="md5File">public  mixed <strong>$md5File</strong> = @file('md5list.txt'</code>
+<div class="details">
+</div>
+
+<code class="signature" id="filePath">public  mixed <strong>$filePath</strong> = $targetDir . DIRECTORY_SEPARATOR . $fileName</code>
+<div class="details">
+</div>
+
+<code class="signature" id="uploadPath">public  mixed <strong>$uploadPath</strong> = $uploadDir . DIRECTORY_SEPARATOR . $fileName</code>
+<div class="details">
+</div>
+
+<code class="signature" id="chunk">public  mixed <strong>$chunk</strong> = isset($_REQUEST[&quot;chunk&quot;]</code>
+<div class="details">
+</div>
+
+<code class="signature" id="chunks">public  mixed <strong>$chunks</strong> = isset($_REQUEST[&quot;chunks&quot;]</code>
+<div class="details">
+</div>
+
+<code class="signature" id="dir">public  mixed <strong>$dir</strong> = $targetDir . DIRECTORY_SEPARATOR . $file</code>
+<div class="details">
+</div>
+
+<code class="signature" id="tmpfilePath">public  mixed <strong>$tmpfilePath</strong></code>
+<div class="details">
+</div>
+
+<code class="signature" id="out">public  mixed <strong>$out</strong> = @fopen(&quot;{$filePath}_{$chunk}.parttmp&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="in">public  mixed <strong>$in</strong> = @fopen($_FILES[&quot;file&quot;][&quot;tmp_name&quot;]</code>
+<div class="details">
+</div>
+
+<code class="signature" id="buff">public  mixed <strong>$buff</strong> = fread($in</code>
+<div class="details">
+</div>
+
+<code class="signature" id="index">public  mixed <strong>$index</strong> = 0</code>
+<div class="details">
+</div>
+
+<code class="signature" id="done">public  mixed <strong>$done</strong> = true</code>
+<div class="details">
+</div>
+
+<code class="signature" id="DIR">public  mixed <strong>$DIR</strong> = 'preview'</code>
+<div class="details">
+<p>此页面用来协助 IE6/7 预览图片，因为 IE 6/7 不支持 base64</p></div>
+
+<code class="signature" id="src">public  mixed <strong>$src</strong> = file_get_contents('php://input'</code>
+<div class="details">
+</div>
+
+<code class="signature" id="previewUrl">public  mixed <strong>$previewUrl</strong> = str_replace(&quot;preview.php&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="base64">public  mixed <strong>$base64</strong> = $matches[2]</code>
+<div class="details">
+</div>
+
+<code class="signature" id="matches">public  mixed <strong>$matches</strong></code>
+<div class="details">
+</div>
+
+<code class="signature" id="filename">public  mixed <strong>$filename</strong> = md5($base64</code>
+<div class="details">
+</div>
+
+<code class="signature" id="data">public  mixed <strong>$data</strong> = base64_decode($base64</code>
+<div class="details">
+</div>
+
+<code class="signature" id="_smarty_tpl">public  mixed <strong>$_smarty_tpl</strong></code>
+<div class="details">
+</div>
+
+<code class="signature" id="print_form">public  void <strong>print_form</strong>()</code>
+<div class="details">
+</div>
+
+<code class="signature" id="saveRemoteImg">public  void <strong>saveRemoteImg</strong>(mixed sUrl)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="getUrl">public  void <strong>getUrl</strong>(mixed sUrl, int jumpNums)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="getLocalPath">public  void <strong>getLocalPath</strong>(mixed sExt)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="fixPre">public  void <strong>fixPre</strong>(mixed match)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="showCode">public  void <strong>showCode</strong>(mixed match)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="showFlv">public  void <strong>showFlv</strong>(mixed match)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="jsonString">public  void <strong>jsonString</strong>(mixed str)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="formatBytes">public  void <strong>formatBytes</strong>(mixed bytes)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="ubb2html">public  void <strong>ubb2html</strong>(mixed sUBB)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="mymd5">public  void <strong>mymd5</strong>(mixed file)</code>
+<div class="details">
+</div>
+
+<p id="footer">This document was generated by <a href="http://peej.github.com/phpdoctor">PHPDoctor: The PHP Documentation Creator</a></p>
+
+</body>
+
+</html>

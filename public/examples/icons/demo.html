@@ -1,0 +1,67 @@
+﻿<div>
+
+    <script type="text/javascript">
+        $(function () {
+            $("#examples-icons-Button1").click(function () {
+                $.easyui.icons.showSelector({
+                    onEnter: function (val) { alert(val); }
+                });
+            });
+
+            $("#examples-icons-Button2").click(function () {
+                $.easyui.icons.showSelector({
+                    size: "32",
+                    onEnter: function (val) { alert(val); }
+                });
+            });
+
+            $("#examples-icons-Button3").click(function () {
+                $.easyui.icons.showSelector({
+                    multiple: true,
+                    onEnter: function (val) { alert(val); }
+                });
+            });
+
+            $("#examples-icons-Button4").click(function () {
+                $.easyui.icons.showSelector({
+                    multiple: true,
+                    size: "32",
+                    onEnter: function (val) { alert(val); }
+                });
+            });
+
+
+            $("#examples-icons-btn1").click(function () {
+                $.easyui.showSourceDialog($(this).currentTabPanel().panel("options").href);
+            });
+        });
+    </script>
+
+    <h2>jEasyUI Icons Plugin Extensions</h2>
+    <p>该部分扩展由文件 jeasyui.extensions.icons.js 实现。</p>
+    <hr />
+    <a id="examples-icons-btn1" class="easyui-linkbutton" data-options="iconCls: 'icon-search', plain: true">查看源码</a>
+    <hr />
+    <input id="examples-icons-Button1" type="button" value="ShowSelector-单选-16" />
+    <input id="examples-icons-Button2" type="button" value="ShowSelector-单选-32" />
+    <input id="examples-icons-Button3" type="button" value="ShowSelector-多选-16" />
+    <input id="examples-icons-Button4" type="button" value="ShowSelector-多选-32" />
+    <hr />
+
+    单选16px:
+    <select id="examples-icons-Select1" class="easyui-comboicons" data-options="width: 280, autoShowPanel: false, multiple: false, size: '16', value: 'icon-standard-application-form-edit'"></select>
+    <br /><br />
+    单选32px:
+    <select id="examples-icons-Select2" class="easyui-comboicons" data-options="width: 280, autoShowPanel: false, multiple: false, size: '32'"></select>
+    <br /><br />
+    多选16px:
+    <select id="examples-icons-Select3" class="easyui-comboicons" data-options="width: 280, autoShowPanel: false, multiple: true, size: '16', value: ['icon-standard-application-form-edit', 'icon-standard-application-tile-vertical']"></select>
+    <br /><br />
+    多选32px:
+    <select id="examples-icons-Select4" class="easyui-comboicons" data-options="width: 280, autoShowPanel: false, multiple: true, size: '32'"></select>
+
+
+
+
+
+</div>

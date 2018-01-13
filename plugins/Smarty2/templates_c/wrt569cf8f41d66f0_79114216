@@ -1,0 +1,22 @@
+<?php /* Smarty version Smarty-3.1.17, created on 2016-01-18 15:38:43
+         compiled from "F:\Web\doclouder\app\views\index\index.phtml" */ ?>
+<?php /*%%SmartyHeaderCode:11410569cf8f396fa38-13543737%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '0d08126f159b266a0a349f368faf022376cca737' => 
+    array (
+      0 => 'F:\\Web\\doclouder\\app\\views\\index\\index.phtml',
+      1 => 1453127588,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '11410569cf8f396fa38-13543737',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.17',
+  'unifunc' => 'content_569cf8f3dc12b6_21761298',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_569cf8f3dc12b6_21761298')) {function content_569cf8f3dc12b6_21761298($_smarty_tpl) {?><?php }} ?>

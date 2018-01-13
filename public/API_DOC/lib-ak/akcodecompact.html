@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="PHPDoctor 2.0.5 (http://peej.github.com/phpdoctor/)">
+<meta name="when" content="Sat, 26 Mar 2016 06:21:35 +0000">
+
+<link rel="stylesheet" type="text/css" href="../stylesheet.css">
+<link rel="start" href="../namespaces.html">
+
+<title>AkCodeCompact (PHPDoctor)</title>
+
+</head>
+<body id="definition">
+
+<header><h1>PHPDoctor: The PHP Documentation Creator</h1><span>Class</span>
+
+<h2>LIB-Ak\AkCodeCompact</h2>
+
+</header><p class="signature">public  class <strong>AkCodeCompact</strong></p>
+
+<div class="comment"><p>PHP去源码注释及轻度压缩数据</p></div>
+
+<table>
+<tr><th>Author</th>
+<td>akiler <532171911@qq.com></td>
+</tr><tr><th>Copyright</th>
+<td>Copyright(c) 2010-2020 by akiler. All rights reserved</td>
+</tr><tr><th>Version</th>
+<td>1.0</td>
+</tr><tr><th>Since</th>
+<td>2014-01-29 12:06:12</td>
+</tr><tr><th>Usage</th>
+<td>header("Content-type:text/html;charset:utf-8"); <br> $d = new AkCodeCompact(__FILE__); <br> echo htmlentities($d->compact()); <br> $d->save("example.php"); <br></td>
+</tr></table>
+<h3>Fields</h3>
+<table>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#after_content">$after_content</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#alowed_type">$alowed_type</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#compact_content">$compact_content</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#content">$content</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#file">$file</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#file_info">$file_info</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#path">$path</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#reg_all_space">$reg_all_space</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#reg_comment">$reg_comment</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#reg_space">$reg_space</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#save_file">$save_file</a></p></td>
+</tr>
+</table>
+
+<h3>Methods</h3>
+<table>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#__construct()">__construct</a>(str path)</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#compact()">compact</a>()</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#compact_hightly()">compact_hightly</a>()</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#free()">free</a>()</p></td>
+</tr>
+<tr>
+<td class="type">protected  void</td>
+<td class="description"><p class="name"><a href="#halt()">halt</a>(mixed error_msg)</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#load_file()">load_file</a>(str path)</p></td>
+</tr>
+<tr>
+<td class="type">protected  void</td>
+<td class="description"><p class="name"><a href="#open_file()">open_file</a>()</p></td>
+</tr>
+<tr>
+<td class="type">protected  void</td>
+<td class="description"><p class="name"><a href="#read_file()">read_file</a>()</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#remove()">remove</a>()</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#save()">save</a>(str file_name)</p></td>
+</tr>
+</table>
+
+<h3>Details</h3>
+<code class="signature" id="after_content">public  mixed <strong>$after_content</strong> = &quot;&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="alowed_type">public  mixed <strong>$alowed_type</strong> = array(...)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="compact_content">public  mixed <strong>$compact_content</strong> = &quot;&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="content">public  mixed <strong>$content</strong> = &quot;&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="file">public  mixed <strong>$file</strong> = &quot;&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="file_info">public  mixed <strong>$file_info</strong> = array()</code>
+<div class="details">
+</div>
+
+<code class="signature" id="path">public  mixed <strong>$path</strong> = &quot;&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="reg_all_space">public  mixed <strong>$reg_all_space</strong> = &quot;!\s+!&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="reg_comment">public  mixed <strong>$reg_comment</strong> = &quot;!((/\*)[\s\S]*?(\*/))|(//.*)!&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="reg_space">public  mixed <strong>$reg_space</strong> = &quot;![ ]+!&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="save_file">public  mixed <strong>$save_file</strong> = &quot;&quot;</code>
+<div class="details">
+</div>
+
+<code class="signature" id="__construct">public  void <strong>__construct</strong>(str path)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="compact">public  void <strong>compact</strong>()</code>
+<div class="details">
+</div>
+
+<code class="signature" id="compact_hightly">public  void <strong>compact_hightly</strong>()</code>
+<div class="details">
+</div>
+
+<code class="signature" id="free">public  void <strong>free</strong>()</code>
+<div class="details">
+</div>
+
+<code class="signature" id="halt">protected  void <strong>halt</strong>(mixed error_msg)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="load_file">public  void <strong>load_file</strong>(str path)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="open_file">protected  void <strong>open_file</strong>()</code>
+<div class="details">
+</div>
+
+<code class="signature" id="read_file">protected  void <strong>read_file</strong>()</code>
+<div class="details">
+</div>
+
+<code class="signature" id="remove">public  void <strong>remove</strong>()</code>
+<div class="details">
+</div>
+
+<code class="signature" id="save">public  void <strong>save</strong>(str file_name)</code>
+<div class="details">
+</div>
+
+<p id="footer">This document was generated by <a href="http://peej.github.com/phpdoctor">PHPDoctor: The PHP Documentation Creator</a></p>
+
+</body>
+
+</html>

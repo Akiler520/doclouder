@@ -1,0 +1,278 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{$_lang.title}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <link href="/public/jquery-easyui-theme/default/easyui.css" rel="stylesheet" type="text/css" />
+    <link href="/public/jquery-easyui-theme/icon.css" rel="stylesheet" type="text/css" />
+    <link href="/public/icons/icon-all.css" rel="stylesheet" type="text/css" />
+
+    <!--<script src="/public/jquery/jquery-1.11.1.js" type="text/javascript"></script>-->
+    <script src="/public/js/jquery.min.js" type="text/javascript"></script>
+
+    <script src="/public/jquery-easyui-1.3.6/jquery.easyui.min.js" type="text/javascript"></script>
+    <script src="/public/jquery-easyui-1.3.6/plugins/jquery-easyui-datagridview/datagrid-groupview.js" type="text/javascript"></script>
+    <script src="/public/jquery-easyui-1.3.6/plugins/jquery-easyui-datagridview/datagrid-detailview.js" type="text/javascript"></script>
+    <script src="/public/jquery-easyui-1.4.4/locale/easyui-lang-{if $_lang_key=='ch'}zh_CN{else}{$_lang_key}{/if}.js?v={$_version}" type="text/javascript"></script>
+
+    <script src="/public/jquery.jdirk.js" type="text/javascript"></script>
+    <!--<script src="release/jquery.jdirk.min.js"></script>-->
+
+
+    <link href="/public/jeasyui-extensions/jeasyui.extensions.css" rel="stylesheet" type="text/css" />
+
+    <!--    <script src="/public/jeasyui-extensions/jeasyui.extensions.js" type="text/javascript"></script>
+        <script src="/public/jeasyui-extensions/jeasyui.extensions.progressbar.js" type="text/javascript"></script>
+        <script src="/public/jeasyui-extensions/jeasyui.extensions.slider.js" type="text/javascript"></script>
+        <script src="/public/jeasyui-extensions/jeasyui.extensions.linkbutton.js" type="text/javascript"></script>
+        <script src="/public/jeasyui-extensions/jeasyui.extensions.form.js" type="text/javascript"></script>
+        <script src="/public/jeasyui-extensions/jeasyui.extensions.validatebox.js" type="text/javascript"></script>
+        <script src="/public/jeasyui-extensions/jeasyui.extensions.combo.js" type="text/javascript"></script>
+        <script src="/public/jeasyui-extensions/jeasyui.extensions.combobox.js" type="text/javascript"></script>
+        <script src="/public/jeasyui-extensions/jeasyui.extensions.menu.js" type="text/javascript"></script>
+        <script src="/public/jeasyui-extensions/jeasyui.extensions.searchbox.js" type="text/javascript"></script>
+        <script src="/public/jeasyui-extensions/jeasyui.extensions.panel.js" type="text/javascript"></script>
+        <script src="/public/jeasyui-extensions/jeasyui.extensions.window.js" type="text/javascript"></script>
+        <script src="/public/jeasyui-extensions/jeasyui.extensions.dialog.js" type="text/javascript"></script>
+        <script src="/public/jeasyui-extensions/jeasyui.extensions.layout.js" type="text/javascript"></script>
+        <script src="/public/jeasyui-extensions/jeasyui.extensions.tree.js" type="text/javascript"></script>
+        <script src="/public/jeasyui-extensions/jeasyui.extensions.datagrid.js" type="text/javascript"></script>
+        <script src="/public/jeasyui-extensions/jeasyui.extensions.treegrid.js" type="text/javascript"></script>
+        <script src="/public/jeasyui-extensions/jeasyui.extensions.combogrid.js" type="text/javascript"></script>
+        <script src="/public/jeasyui-extensions/jeasyui.extensions.combotree.js" type="text/javascript"></script>
+        <script src="/public/jeasyui-extensions/jeasyui.extensions.tabs.js" type="text/javascript"></script>
+        <script src="/public/jeasyui-extensions/jeasyui.extensions.theme.js" type="text/javascript"></script>-->
+    <script src="/public/release/jeasyui.extensions.all.min.js" type="text/javascript"></script>
+
+    <script src="/public/icons/jeasyui.icons.all.js" type="text/javascript"></script>
+    <!--<script src="/public/release/jeasyui.icons.all.min.js"></script>-->
+
+    <script src="/public/jeasyui-extensions/jeasyui.extensions.icons.js" type="text/javascript"></script>
+    <script src="/public/jeasyui-extensions/jeasyui.extensions.gridselector.js" type="text/javascript"></script>
+<!--    <script src="/public/plugins/My97DatePicker/WdatePicker.js" type="text/javascript"></script>-->
+    <!--<script src="/public/plugins/uploadify/jquery.uploadify.min.js" type="text/javascript"></script>-->
+
+    <script src="/public/jeasyui-extensions/jquery.toolbar.js" type="text/javascript"></script>
+    <script src="/public/jeasyui-extensions/jquery.comboicons.js" type="text/javascript"></script>
+    <script src="/public/jeasyui-extensions/jquery.comboselector.js" type="text/javascript"></script>
+    <script src="/public/jeasyui-extensions/jquery.my97.js" type="text/javascript"></script>
+    <script src="/public/jeasyui-extensions/jquery.portal.js" type="text/javascript"></script>
+
+    <!--导入首页启动时需要的相应资源文件(首页相应功能的 js 库、css样式以及渲染首页界面的 js 文件)-->
+    <script src="/public/asset/_language_js_{$_lang_key}.js" type="text/javascript"></script>
+    <script src="/public/common/const.js" type="text/javascript"></script>
+
+    <script src="/public/core/admin.common.js" type="text/javascript"></script>
+    <script src="/public/core/admin.datagrid.js" type="text/javascript"></script>
+
+    <script src="/public/common/common.js" type="text/javascript"></script>
+    <script src="/public/common/index.js?v={$_version}" type="text/javascript"></script>
+    <script src="/public/common/index-startup.js?v={$_version}" type="text/javascript"></script>
+
+    <script src="/public/core/AkTable.js?v={$_version}" type="text/javascript"></script>
+    <script src="/public/core/admin.process.manager.js?v={$_version}" type="text/javascript"></script>
+    <script src="/public/core/admin.folder.js?v={$_version}" type="text/javascript"></script>
+    <script src="/public/core/admin.menu.js?v={$_version}" type="text/javascript"></script>
+
+    <link href="/public/common/index.css?v={$_version}" rel="stylesheet" />
+
+    <!--webuploader-->
+    <link rel="stylesheet" type="text/css" href="/public/webuploader/css/webuploader.css" />
+    <script type="text/javascript" src="/public/webuploader/dist/webuploader.js"></script>
+    <script type="text/javascript" src="/public/core/admin.upload.js?v={$_version}"></script>
+</head>
+<body>
+<div id="maskContainer">
+    <div class="datagrid-mask" style="display: block;"></div>
+    <div class="datagrid-mask-msg" style="display: block; left: 50%; margin-left: -52.5px;">
+        {$_lang.loading}...
+    </div>
+</div>
+
+<div id="mainLayout" class="easyui-layout hidden" data-options="fit: true">
+    <div id="northPanel" data-options="region: 'north', border: false" style="height: 80px; overflow: hidden;">
+        <div id="topbar" class="top-bar">
+            <div class="top-bar-left">
+                <h1 style="margin-left: 10px; margin-top: 10px;"></h1>
+            </div>
+            <div class="top-bar-right">
+                <div id="timerSpan"></div>
+                <div id="themeSpan">
+                    <span>{$_lang.change_face}：</span>
+                    <select id="themeSelector"></select>
+                    <a id="btnHideNorth" class="easyui-linkbutton" data-options="plain: true, iconCls: 'layout-button-up'"></a>
+                </div>
+            </div>
+        </div>
+        <div id="toolbar" class="panel-header panel-header-noborder top-toolbar">
+            <div id="infobar">
+            <span class="icon-hamburg-user" style="padding-left: 25px; background-position: left center;">
+                {$_lang.username}：{$userInfo.username}
+            </span>
+            </div>
+            <div id="searchbar">
+                <input id="topSearchbox" name="topSearchbox" class="easyui-searchbox"
+                       data-options="width: 350, height: 26, prompt: '{$_lang.prompt_search}', menu: '#topSearchboxMenu'" />
+                <div id="topSearchboxMenu" style="width: 85px;">
+                    <div data-options="name:'1', iconCls: 'icon-hamburg-zoom'">{$_lang.document_id}</div>
+                    <div data-options="name:'2'">{$_lang.username}</div>
+                </div>
+            </div>
+            <div id="uploadBar">
+                <a id="uploadBtn" class="easyui-linkbutton" data-options="plain: false, iconCls: 'icon-add', iconAlign: 'left'">{$_lang.upload}</a>
+            </div>
+            <div id="buttonbar">
+                <a id="btnFullScreen" class="easyui-linkbutton" data-options="plain: true, iconCls: 'icon-standard-arrow-inout'">{$_lang.screen_full}</a>
+                <a id="btnExit" class="easyui-linkbutton" data-options="plain: true, iconCls: 'icon-hamburg-sign-out'">{$_lang.logout}</a>
+                <a id="btnShowNorth" class="easyui-linkbutton" data-options="plain: true, iconCls: 'layout-button-down'" style="display: none;"></a>
+            </div>
+        </div>
+    </div>
+
+    <div data-options="region: 'west', title: '{$_lang.nav}', iconCls: 'icon-standard-map', split: true, minWidth: 250, maxWidth: 500" style="width: 250px; padding: 1px;">
+        <div id="navMenu_list" class="easyui-accordion">
+            <div title="Title1" data-options="iconCls:'icon-standard-server',selected:true" style="overflow:auto;padding:10px;">
+                <h3 style="color:#0099FF;">Accordion for jQuery</h3>
+                <p>Accordion is a part of easyui framework for jQuery.
+                    It lets you define your accordion component on web page more easily.</p>
+            </div>
+            <div title="Title2" data-options="iconCls:'icon-standard-server'" style="overflow:auto;padding:10px;">
+                <h3 style="color:#0099FF;">Accordion for jQuery</h3>
+                <p>Accordion is a part of easyui framework for jQuery.
+                    It lets you define your accordion component on web page more easily.</p>
+            </div>
+        </div>
+    </div>
+
+    <div data-options="region: 'center'" style="padding: 1px;">
+        <div id="mainTabs_tools" class="tabs-tool">
+            <table>
+                <tr>
+                    <td><a id="mainTabs_jumpHome" class="easyui-linkbutton easyui-tooltip" title="{$_lang.jump_home}" data-options="plain: true, iconCls: 'icon-hamburg-home'"></a></td>
+                    <td><div class="datagrid-btn-separator"></div></td>
+                    <td><a id="mainTabs_toggleAll" class="easyui-linkbutton easyui-tooltip" title="{$_lang.fold_unfold_panel}" data-options="plain: true, iconCls: 'icon-standard-arrow-inout'"></a></td>
+                    <td><div class="datagrid-btn-separator"></div></td>
+                    <!--<td><a id="mainTabs_jumpTab" class="easyui-linkbutton easyui-tooltip" title="在新页面中打开该选项卡" data-options="plain: true, iconCls: 'icon-standard-shape-move-forwards'"></a></td>-->
+                    <td><div class="datagrid-btn-separator"></div></td>
+                </tr>
+            </table>
+        </div>
+        <div id="mainTabs" class="easyui-tabs" data-options="fit: true, border: true, showOption: true, enableNewTabMenu: true,
+                tools: '#mainTabs_tools', enableJumpTabMenu: true, onSelect: function (title, index) { window.mainpage.mainTabs.updateHash(index); }">
+            <div id="homePanel" data-options="title: '{$_lang.home_page}', iconCls: 'icon-hamburg-home'">
+                <div class="easyui-layout" data-options="fit: true">
+                    <div data-options="region: 'center', border: false" style="overflow: hidden;">
+                        <div id="portal" class="easyui-portal" data-options="fit: true, border: false">
+                            <div style="width: 25%;" id="portal-a">
+                                <div data-options="title: '待处理订单', height: 240, collapsible: true,
+                                    tools: [{ iconCls: 'icon-hamburg-refresh', handler: function () { window.orderUnprocessed.reload(); } }]">
+                                    <div id="order-list-unprocessed"></div>
+                                </div>
+                                <div data-options="title: '待处理订单', height: 240, collapsible: true,
+                                    tools: [{ iconCls: 'icon-hamburg-refresh', handler: function () { window.orderUnprocessed.reload(); } }]">
+                                    <div id="order-list-unprocessed"></div>
+                                </div>
+                            </div>
+                            <div style="width: 25%;" id="portal-b">
+                                <div data-options="title: '新订单', height: 240, collapsible: true,
+                                    tools: [{ iconCls: 'icon-hamburg-refresh', handler: function () { window.orderUnpaidNew.reload(); } }]">
+                                    <div id="order-list-new"></div>
+                                </div>
+                                <div data-options="title: '新订单', height: 240, collapsible: true,
+                                    tools: [{ iconCls: 'icon-hamburg-refresh', handler: function () { window.orderUnpaidNew.reload(); } }]">
+                                    <div id="order-list-new"></div>
+                                </div>
+                            </div>
+                            <div style="width: 25%;"  id="portal-c">
+                                <div data-options="title: '更新日志', height: 240, collapsible: true, closable: true,
+                                    tools: [{ iconCls: 'icon-hamburg-refresh', handler: function () { window.changeLog.reload(); } }]">
+                                    <div id="changelog-list"></div>
+                                </div>
+                                <div data-options="title: '更新日志', height: 240, collapsible: true, closable: true,
+                                    tools: [{ iconCls: 'icon-hamburg-refresh', handler: function () { window.changeLog.reload(); } }]">
+                                    <div id="changelog-list"></div>
+                                </div>
+                            </div>
+                            <div style="width: 25%;"  id="portal-d">
+                                <div data-options="title: '更新日志', height: 240, collapsible: true, closable: true,
+                                    tools: [{ iconCls: 'icon-hamburg-refresh', handler: function () { window.changeLog.reload(); } }]">
+                                    <div id="changelog-list"></div>
+                                </div>
+                                <div data-options="title: '更新日志', height: 240, collapsible: true, closable: true,
+                                    tools: [{ iconCls: 'icon-hamburg-refresh', handler: function () { window.changeLog.reload(); } }]">
+                                    <div id="changelog-list"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-options="region: 'east', title: '{$_lang.friend_link}',collapsed: true, iconCls: 'icon-standard-date', split: false, minWidth: 200, maxWidth: 500" style="width: 220px;">
+    <div id="eastLayout" class="easyui-layout" data-options="fit: true">
+    <div data-options="region: 'north', split: false, border: false" style="height: 220px;">
+    <div class="easyui-calendar" data-options="fit: true, border: false"></div>
+    </div>
+    <div id="linkPanel" data-options="region: 'center', border: false, title: '{$_lang.friend_link}', iconCls: 'icon-hamburg-link',
+    tools: [{ iconCls: 'icon-hamburg-refresh', handler: function () { window.link.reload(); } }]">
+    <ul id="linkList" class="portlet-list link-list"></ul>
+    </div>
+    </div>
+    </div>
+    <div data-options="region: 'south', title: '{$_lang.about_us}', iconCls: 'icon-standard-information', collapsed: true, border: false" style="height: 70px;">
+        <div style="color: #4e5766; padding: 6px 0px 0px 0px; margin: 0px auto; text-align: center; font-size:12px; font-family:微软雅黑;">
+            Copyright 2013-2015, doclouder.com.All Rights Reserved . DOClouder Management | Powered by 蜀ICP备1402534336号-1&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="#" target="_blank" style="text-decoration: none;">{$_lang.about}【DOClouder】</a><br />
+            {$_lang.use_better}&nbsp;
+            <a href="http://windows.microsoft.com/zh-CN/internet-explorer/products/ie/home" target="_blank" style="text-decoration: none;">IE(Version 9/10/11)</a>/
+            <a href="https://www.google.com/intl/zh-CN/chrome/browser/" target="_blank" style="text-decoration: none;">Chrome</a>/
+            <a href="http://firefox.com.cn/download/" target="_blank" style="text-decoration: none;">Firefox</a>
+            &nbsp;{$_lang.browser_kind}
+        </div>
+    </div>
+</div>
+
+<div id="win-upload" class="easyui-window" title="Upload Window" style="width:600px;height:520px;" data-options="closed:true">
+    <div id="wrapper">
+        <div id="container">
+            <!--头部，相册选择和格式选择-->
+
+            <div id="uploader">
+                <div class="queueList">
+                    <div id="dndArea" class="placeholder">
+                        <div id="filePicker"></div>
+                        <p>{$_lang.upload_drag}</p>
+                    </div>
+                </div>
+                <div class="statusBar" style="display:none;">
+                    <div class="progress">
+                        <span class="text">0%</span>
+                        <span class="percentage"></span>
+                    </div>
+                    <div class="info"></div>
+                    <div class="btns">
+                        <div id="filePicker2"></div><div class="uploadBtn">{$_lang.start} {$_lang.upload}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{literal}
+<script type="text/javascript">
+    $(function(){
+        AdminConfig.resize();
+        AdminConfig.windowInit();
+        Config.init();
+    });
+</script>
+{/literal}
+
+</body>
+</html>

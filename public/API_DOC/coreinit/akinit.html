@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="PHPDoctor 2.0.5 (http://peej.github.com/phpdoctor/)">
+<meta name="when" content="Sat, 26 Mar 2016 06:21:34 +0000">
+
+<link rel="stylesheet" type="text/css" href="../stylesheet.css">
+<link rel="start" href="../namespaces.html">
+
+<title>AkInit (PHPDoctor)</title>
+
+</head>
+<body id="definition">
+
+<header><h1>PHPDoctor: The PHP Documentation Creator</h1><span>Class</span>
+
+<h2>CoreInit\AkInit</h2>
+
+</header><p class="signature">public  class <strong>AkInit</strong></p>
+
+<div class="comment"><p>Class Ak_Init</p><p>Initialize the system</p><p>Use Phalcon to do some registers of the MVC</p><p>Use automatic way to load the library class from external API</p></div>
+
+<h3>Methods</h3>
+<table>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#__construct()">__construct</a>()</p></td>
+</tr>
+<tr>
+<td class="type">protected  bool</td>
+<td class="description"><p class="name"><a href="#autoLoad()">autoLoad</a>($className className)</p><p class="description">load the class of library automatically
+will be called by 'spl_autoload_register'</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#fire()">fire</a>()</p><p class="description">Start to run</p></td>
+</tr>
+<tr>
+<td class="type">protected  void</td>
+<td class="description"><p class="name"><a href="#initCache()">initCache</a>()</p></td>
+</tr>
+<tr>
+<td class="type">protected  void</td>
+<td class="description"><p class="name"><a href="#initConfig()">initConfig</a>()</p><p class="description">inject configuration
+in order to be called by Model or Controller</p></td>
+</tr>
+<tr>
+<td class="type">protected  void</td>
+<td class="description"><p class="name"><a href="#initDatabase()">initDatabase</a>()</p><p class="description">Register the database, use DI of PhalconDatabase connection is created based in the parameters defined in the configuration file</p></td>
+</tr>
+<tr>
+<td class="type">protected  void</td>
+<td class="description"><p class="name"><a href="#initDispatcher()">initDispatcher</a>()</p><p class="description">Register the events manager</p></td>
+</tr>
+<tr>
+<td class="type">protected  void</td>
+<td class="description"><p class="name"><a href="#initFilterManger()">initFilterManger</a>()</p><p class="description">Initialize filter manager</p></td>
+</tr>
+<tr>
+<td class="type">protected  void</td>
+<td class="description"><p class="name"><a href="#initLoader()">initLoader</a>()</p><p class="description">register the direction of MVC for Load of Phalcon</p></td>
+</tr>
+<tr>
+<td class="type">protected  void</td>
+<td class="description"><p class="name"><a href="#initModelManager()">initModelManager</a>()</p><p class="description">Initialize the manager of model</p></td>
+</tr>
+<tr>
+<td class="type">protected  void</td>
+<td class="description"><p class="name"><a href="#initSession()">initSession</a>()</p><p class="description">Initialize the session</p></td>
+</tr>
+<tr>
+<td class="type">protected  void</td>
+<td class="description"><p class="name"><a href="#initView()">initView</a>()</p><p class="description">Initialize the View of PhalconContains Url, View, Volt</p></td>
+</tr>
+<tr>
+<td class="type">protected  void</td>
+<td class="description"><p class="name"><a href="#libraryLoad()">libraryLoad</a>()</p><p class="description">load external library</p></td>
+</tr>
+</table>
+
+<h3>Details</h3>
+<code class="signature" id="__construct">public  void <strong>__construct</strong>()</code>
+<div class="details">
+</div>
+
+<code class="signature" id="autoLoad">protected  bool <strong>autoLoad</strong>($className className)</code>
+<div class="details">
+<p>load the class of library automatically
+will be called by 'spl_autoload_register'</p></div>
+
+<code class="signature" id="fire">public  void <strong>fire</strong>()</code>
+<div class="details">
+<p>Start to run</p></div>
+
+<code class="signature" id="initCache">protected  void <strong>initCache</strong>()</code>
+<div class="details">
+</div>
+
+<code class="signature" id="initConfig">protected  void <strong>initConfig</strong>()</code>
+<div class="details">
+<p>inject configuration
+in order to be called by Model or Controller</p></div>
+
+<code class="signature" id="initDatabase">protected  void <strong>initDatabase</strong>()</code>
+<div class="details">
+<p>Register the database, use DI of Phalcon</p><p>Database connection is created based in the parameters defined in the configuration file</p></div>
+
+<code class="signature" id="initDispatcher">protected  void <strong>initDispatcher</strong>()</code>
+<div class="details">
+<p>Register the events manager</p></div>
+
+<code class="signature" id="initFilterManger">protected  void <strong>initFilterManger</strong>()</code>
+<div class="details">
+<p>Initialize filter manager</p></div>
+
+<code class="signature" id="initLoader">protected  void <strong>initLoader</strong>()</code>
+<div class="details">
+<p>register the direction of MVC for Load of Phalcon</p></div>
+
+<code class="signature" id="initModelManager">protected  void <strong>initModelManager</strong>()</code>
+<div class="details">
+<p>Initialize the manager of model</p></div>
+
+<code class="signature" id="initSession">protected  void <strong>initSession</strong>()</code>
+<div class="details">
+<p>Initialize the session</p></div>
+
+<code class="signature" id="initView">protected  void <strong>initView</strong>()</code>
+<div class="details">
+<p>Initialize the View of Phalcon</p><p>Contains Url, View, Volt</p></div>
+
+<code class="signature" id="libraryLoad">protected  void <strong>libraryLoad</strong>()</code>
+<div class="details">
+<p>load external library</p></div>
+
+<p id="footer">This document was generated by <a href="http://peej.github.com/phpdoctor">PHPDoctor: The PHP Documentation Creator</a></p>
+
+</body>
+
+</html>

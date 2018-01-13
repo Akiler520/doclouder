@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="dms,docuemtn,management system">
+<meta name="description" content="Your Management System">
+<meta name="author" content="Akiler">
+<script language="javascript" type="text/javascript" src="/js/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="/js/jquery.easyui.min.js"></script>
+<!--<script language="javascript" type="text/javascript" src="/js/easyloader.js"></script>-->
+<script language="javascript" type="text/javascript" src="/js/common.js"></script>
+<script language="javascript" type="text/javascript" src="/js/test.js"></script>
+
+<link href="/js/themes/icon.css" type="text/css" rel="stylesheet">
+<link href="/js/themes/default/easyui.css" type="text/css" rel="stylesheet">
+
+<link type="text/css" rel="stylesheet" href="/css/style.css">
+{literal}
+<script>
+
+$(document).ready(function(){
+
+	/*easyloader.base = './js/';//设置easyui的基目录，比如你自己写的代码是easyui/demo/doc/a.html，那么这个值应该设为../../../ 
+	easyloader.theme = 'bootstrap';
+	easyloader.load('messager', function(){//加载指定组件所需的javascript文件，这里加载了messager组件。 
+	    $.messager.alert('Title', 'load ok'); 
+	});*/
+
+/*	$("#aims-window-test").draggable({
+		handle: ".window-header",
+		onStopDrag:function(e){
+			 var d = e.data;
+			 alert(d.left);
+			if (d.left < 0){d.left = 0}
+			if (d.top < 0){d.top = 0}
+			if (d.left + $(d.target).outerWidth() > $(d.parent).width()){
+			d.left = $(d.parent).width() - $(d.target).outerWidth();
+			}
+			if (d.top + $(d.target).outerHeight() > $(d.parent).height()){
+			d.top = $(d.parent).height() - $(d.target).outerHeight();
+			}
+		}
+	});
+*/	
+	$(document).bind('contextmenu',function(e){
+		e.preventDefault();
+		
+		//alert($(e.currentTarget).text());<br />
+		//alert($(e.target).attr("name"));
+		//alert($(e.target)[0].tagName);
+		var tagName = $(e.target)[0].tagName.toLowerCase();
+		//alert('tag name:'+tagName);
+		if(tagName == 'input'){
+			//alert($(e.target).attr("name"));
+		}else if(tagName == 'li'){
+			//alert($(e.target).text());
+		}else if(tagName == 'div'){
+			AimsMenu.show('#aims-start-menu', e);
+			//alert("null");
+			return false;
+		}
+		
+		AimsMenu.show('#aims-main-menu', e);
+	});
+});
+</script>
+{/literal}
+<title>test</title>
+</head><body>
+<input name="test" type="hidden" id="test" value="win" />
+<div id="aims-main">
+  <ul>
+    {foreach from=$userlist item=userinfo}
+    <li> {$userinfo->username} </li>
+    {/foreach}
+  </ul>
+</div>
+<div id="aims-task-bar" class="panel-header">
+  <div id="aims-task-menu">
+  	<a href="#" class="easyui-linkbutton" onclick="AimsMenu.show('#aims-start-menu');"> Start </a>
+  </div>
+  <div id="aims-task-tag"> </div>
+  <div id="aims-task-info"> </div>
+</div>
+<div id="aims-start-menu" style="width:200px;" class="easyui-menu" data-options="onClick:AimsMenu.handler">
+  <div data-options="iconCls:'icon-undo',name:'undo'">Undo</div>
+  <div data-options="iconCls:'icon-redo',name:'redo'">Redo</div>
+  <div class="menu-sep"></div>
+  <div>Cut</div>
+  <div>Copy</div>
+  <div>Paste</div>
+  <div class="menu-sep"></div>
+  <div> <span>Toolbar</span>
+    <div style="width:150px;">
+      <div>Address</div>
+      <div>Link</div>
+      <div>Navigation Toolbar</div>
+      <div>Bookmark Toolbar</div>
+      <div class="menu-sep"></div>
+      <div>New Toolbar...</div>
+    </div>
+  </div>
+  <div data-options="iconCls:'icon-remove'">Delete</div>
+  <div>Select All</div>
+</div>
+<div id="aims-main-menu" class="easyui-menu" data-options="onClick:AimsMenu.handler" style="width:120px;">
+  <div data-options="name:'new'">New</div>
+  <div data-options="name:'save',iconCls:'icon-save'">Save</div>
+  <div data-options="name:'print',iconCls:'icon-print'">Print</div>
+  <div class="menu-sep"></div>
+  <div data-options="name:'exit'">Exit</div>
+</div>
+<div id="aims-window-test" class="easyui-window" title="Window Layout" data-options="iconCls:'icon-save',closed:true" style="width:600px;height:400px;padding:5px;">
+  <div class="easyui-layout" data-options="fit:true">
+    <div data-options="region:'west',split:true,maxWidth:400" style="width:200px"></div>
+    <div data-options="region:'center'" style="padding:10px;"> jQuery EasyUI framework help you build your web page easily. </div>
+    <div data-options="region:'south'" style="text-align:right;padding:5px;"> information </div>
+  </div>
+</div>
+</body>
+</html>

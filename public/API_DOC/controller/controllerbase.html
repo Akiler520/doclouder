@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="PHPDoctor 2.0.5 (http://peej.github.com/phpdoctor/)">
+<meta name="when" content="Sat, 26 Mar 2016 06:21:32 +0000">
+
+<link rel="stylesheet" type="text/css" href="../stylesheet.css">
+<link rel="start" href="../namespaces.html">
+
+<title>ControllerBase (PHPDoctor)</title>
+
+</head>
+<body id="definition">
+
+<header><h1>PHPDoctor: The PHP Documentation Creator</h1><span>Class</span>
+
+<h2>Controller\ControllerBase</h2>
+
+</header><dl>
+<dt>All Known Subclasses:</dt>
+<dd><a href="../controller/areacontroller.html">AreaController</a> <a href="../controller/documentcontroller.html">DocumentController</a> <a href="../controller/documentinfocontroller.html">DocumentInfoController</a> <a href="../controller/documentrulecontroller.html">DocumentRuleController</a> <a href="../controller/documenttypecontroller.html">DocumentTypeController</a> <a href="../controller/documentveriontcontroller.html">DocumentVeriontController</a> <a href="../controller/errorcontroller.html">ErrorController</a> <a href="../controller/foldercontroller.html">FolderController</a> <a href="../controller/foldertypecontroller.html">FolderTypeController</a> <a href="../controller/indexcontroller.html">IndexController</a> <a href="../controller/logcontroller.html">LogController</a> <a href="../controller/menucontroller.html">MenuController</a> <a href="../controller/permissioncontroller.html">PermissionController</a> <a href="../controller/permissionlistcontroller.html">PermissionListController</a> <a href="../controller/remindcontroller.html">RemindController</a> <a href="../controller/sessioncontroller.html">SessionController</a> <a href="../controller/settingcontroller.html">SettingController</a> <a href="../controller/systeminfocontroller.html">SystemInfoController</a> <a href="../controller/testcontroller.html">TestController</a> <a href="../controller/uploadcontroller.html">UploadController</a> <a href="../controller/usercontroller.html">UserController</a> <a href="../controller/usergroupcontroller.html">UserGroupController</a> <a href="../controller/verifycontroller.html">VerifyController</a> <a href="../controller/verifytypecontroller.html">VerifyTypeController</a> </dd>
+</dl>
+
+<p class="signature">public  class <strong>ControllerBase</strong> extends Phalcon\Mvc\Controller
+
+</p>
+
+<div class="comment"><p>Base controller manager</p></div>
+
+<table>
+<tr><th>Author</th>
+<td>akiler <532171911@qq.com></td>
+</tr><tr><th>Copyright</th>
+<td>2010-2020</td>
+</tr><tr><th>Version</th>
+<td>1.0</td>
+</tr><tr><th>Since</th>
+<td>2015-09-29</td>
+</tr></table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td class="type">protected  mixed</td>
+<td class="description"><p class="name"><a href="#forward()">forward</a>($uri uri)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> mixed|void</td>
+<td class="description"><p class="name"><a href="#get()">get</a>(null filter, null default, mixed param)</p><p class="description">get $_REQUEST and $_GET request from client</p></td>
+</tr>
+<tr>
+<td class="type"> string</td>
+<td class="description"><p class="name"><a href="#getPost()">getPost</a>(null filter, null default, mixed param)</p><p class="description">get $_POST request only from client</p></td>
+</tr>
+<tr>
+<td class="type">protected  void</td>
+<td class="description"><p class="name"><a href="#initialize()">initialize</a>()</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#jsonExit()">jsonExit</a>(array data)</p><p class="description">feedback json data and exit the procedure</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#jsonReturn()">jsonReturn</a>(int code, string message, array data, bool|true exit)</p><p class="description">feedback json data</p></td>
+</tr>
+</table>
+
+<h3>Details</h3>
+<code class="signature" id="forward">protected  mixed <strong>forward</strong>($uri uri)</code>
+<div class="details">
+<p></p><table>
+<tr><th>Author</th>
+<td>akiler</td>
+</tr></table>
+</div>
+
+<code class="signature" id="get">public  mixed|void <strong>get</strong>(null filter, null default, mixed param)</code>
+<div class="details">
+<p>get $_REQUEST and $_GET request from client</p></div>
+
+<code class="signature" id="getPost">public  string <strong>getPost</strong>(null filter, null default, mixed param)</code>
+<div class="details">
+<p>get $_POST request only from client</p></div>
+
+<code class="signature" id="initialize">protected  void <strong>initialize</strong>()</code>
+<div class="details">
+</div>
+
+<code class="signature" id="jsonExit">public  void <strong>jsonExit</strong>(array data)</code>
+<div class="details">
+<p>feedback json data and exit the procedure</p></div>
+
+<code class="signature" id="jsonReturn">public  void <strong>jsonReturn</strong>(int code, string message, array data, bool|true exit)</code>
+<div class="details">
+<p>feedback json data</p><table>
+<tr><th>Parameters</th>
+<td>code - : 1=success,0=failure</td>
+<td></td>
+<td></td>
+<td></td>
+</tr></table>
+</div>
+
+<p id="footer">This document was generated by <a href="http://peej.github.com/phpdoctor">PHPDoctor: The PHP Documentation Creator</a></p>
+
+</body>
+
+</html>

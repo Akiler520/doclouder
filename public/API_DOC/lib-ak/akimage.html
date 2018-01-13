@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="PHPDoctor 2.0.5 (http://peej.github.com/phpdoctor/)">
+<meta name="when" content="Sat, 26 Mar 2016 06:21:38 +0000">
+
+<link rel="stylesheet" type="text/css" href="../stylesheet.css">
+<link rel="start" href="../namespaces.html">
+
+<title>AkImage (PHPDoctor)</title>
+
+</head>
+<body id="definition">
+
+<header><h1>PHPDoctor: The PHP Documentation Creator</h1><span>Class</span>
+
+<h2>LIB-Ak\AkImage</h2>
+
+</header><p class="signature">public  class <strong>AkImage</strong></p>
+
+<div class="comment"><p>基本图片处理，用于完成图片缩入，水印添加
+当水印图超过目标图片尺寸时，水印图能自动适应目标图片而缩小
+水印图可以设置跟背景的合并度</p></div>
+
+<table>
+<tr><th>Author</th>
+<td>akiler <532171911@qq.com></td>
+</tr><tr><th>Copyright</th>
+<td>Copyright(c) 2010-2020 by akiler. All rights reserved</td>
+</tr><tr><th>Version</th>
+<td>1.0</td>
+</tr><tr><th>Since</th>
+<td>2014-07-21 15:12:45</td>
+</tr><tr><th>Usage</th>
+<td>自动裁切: <br> 程序会按照图片的尺寸从中部裁切最大的正方形，并按目标尺寸进行缩略 <br> $t->setSrcImg("img/test.jpg"); <br> $t->setCutType(1);//这一句就OK了 <br> $t->setDstImg("tmp/new_test.jpg"); <br> $t->createImg(60,60); <br> 手工裁切:<br> 程序会按照指定的位置从源图上取图 <br> $t->setSrcImg("img/test.jpg"); <br> $t->setCutType(2);//指明为手工裁切 <br> $t->setSrcCutPosition(100, 100);// 源图起点坐标 <br> $t->setRectangleCut(300, 200);// 裁切尺寸 <br> $t->setDstImg("tmp/new_test.jpg"); <br> $t->createImg(300,200); <br></td>
+</tr></table>
+<h3>Fields</h3>
+<table>
+<tr>
+<td class="type">static  mixed</td>
+<td class="description"><p class="name"><a href="#_instance">$_instance</a></p></td>
+</tr>
+</table>
+
+<h3>Methods</h3>
+<table>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#__construct()">__construct</a>()</p><p class="description">构造函数</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#createImg()">createImg</a>(integer a, integer b)</p><p class="description">创建图片,主函数</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#flipH()">flipH</a>()</p><p class="description">水平翻转</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#flipV()">flipV</a>()</p><p class="description">垂直翻转</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#getImgHeight()">getImgHeight</a>(mixed src)</p><p class="description">取得图片的高</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#getImgWidth()">getImgWidth</a>(mixed src)</p><p class="description">取得图片的宽</p></td>
+</tr>
+<tr>
+<td class="type">static  void</td>
+<td class="description"><p class="name"><a href="#getInstance()">getInstance</a>()</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setCutType()">setCutType</a>((类型) (参数名), mixed type)</p><p class="description">设置剪切类型</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setDstImg()">setDstImg</a>(string dst_img)</p><p class="description">设置图片生成路径</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setDstImgBorder()">setDstImgBorder</a>((类型) (参数名), int size, str color)</p><p class="description">设置缩略图边框</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setImgCreateQuality()">setImgCreateQuality</a>(string n)</p><p class="description">设置图片的生成质量</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setImgDisplayQuality()">setImgDisplayQuality</a>(string n)</p><p class="description">设置图片的显示质量</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setMaskFont()">setMaskFont</a>(string|integer font)</p><p class="description">设置水印字体</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setMaskFontColor()">setMaskFontColor</a>(string color)</p><p class="description">设置字体颜色</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setMaskFontSize()">setMaskFontSize</a>(str size)</p><p class="description">设置文字字体大小,仅对truetype字体有效</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setMaskImg()">setMaskImg</a>(string img)</p><p class="description">设置图片水印</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setMaskImgPct()">setMaskImgPct</a>(integer n)</p><p class="description">设置图片合并程度</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setMaskOffsetX()">setMaskOffsetX</a>(integer x)</p><p class="description">设置水印横向偏移</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setMaskOffsetY()">setMaskOffsetY</a>(integer y)</p><p class="description">设置水印纵向偏移</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setMaskPosition()">setMaskPosition</a>(integer position)</p><p class="description">指定水印位置</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setMaskTxtPct()">setMaskTxtPct</a>(integer n)</p><p class="description">设置文字合并程度</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setMaskWord()">setMaskWord</a>(string word, integer font, string color)</p><p class="description">设置文字水印</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setRectangleCut()">setRectangleCut</a>(integer width, mixed height)</p><p class="description">设置图片剪切</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setSrcCutPosition()">setSrcCutPosition</a>((类型) (参数名), mixed x, mixed y)</p><p class="description">设置源图剪切起始坐标点</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setSrcImg()">setSrcImg</a>(string src_img, $img_type img_type)</p><p class="description">设置源图片路径</p></td>
+</tr>
+</table>
+
+<h3>Details</h3>
+<code class="signature" id="_instance">public static  mixed <strong>$_instance</strong></code>
+<div class="details">
+</div>
+
+<code class="signature" id="__construct">public  void <strong>__construct</strong>()</code>
+<div class="details">
+<p>构造函数</p></div>
+
+<code class="signature" id="createImg">public  void <strong>createImg</strong>(integer a, integer b)</code>
+<div class="details">
+<p>创建图片,主函数</p><table>
+<tr><th>Parameters</th>
+<td>a - 当缺少第二个参数时，此参数将用作百分比， 否则作为宽度值</td>
+<td>b - 图片缩放后的高度</td>
+</tr></table>
+</div>
+
+<code class="signature" id="flipH">public  void <strong>flipH</strong>()</code>
+<div class="details">
+<p>水平翻转</p></div>
+
+<code class="signature" id="flipV">public  void <strong>flipV</strong>()</code>
+<div class="details">
+<p>垂直翻转</p></div>
+
+<code class="signature" id="getImgHeight">public  void <strong>getImgHeight</strong>(mixed src)</code>
+<div class="details">
+<p>取得图片的高</p></div>
+
+<code class="signature" id="getImgWidth">public  void <strong>getImgWidth</strong>(mixed src)</code>
+<div class="details">
+<p>取得图片的宽</p></div>
+
+<code class="signature" id="getInstance">public static  void <strong>getInstance</strong>()</code>
+<div class="details">
+</div>
+
+<code class="signature" id="setCutType">public  void <strong>setCutType</strong>((类型) (参数名), mixed type)</code>
+<div class="details">
+<p>设置剪切类型</p><table>
+<tr><th>Parameters</th>
+<td>(参数名) - (描述)</td>
+</tr></table>
+</div>
+
+<code class="signature" id="setDstImg">public  void <strong>setDstImg</strong>(string dst_img)</code>
+<div class="details">
+<p>设置图片生成路径</p><table>
+<tr><th>Parameters</th>
+<td>dst_img - 图片生成路径</td>
+</tr></table>
+</div>
+
+<code class="signature" id="setDstImgBorder">public  void <strong>setDstImgBorder</strong>((类型) (参数名), int size, str color)</code>
+<div class="details">
+<p>设置缩略图边框</p><table>
+<tr><th>Parameters</th>
+<td>(参数名) - (描述)</td>
+</tr></table>
+</div>
+
+<code class="signature" id="setImgCreateQuality">public  void <strong>setImgCreateQuality</strong>(string n)</code>
+<div class="details">
+<p>设置图片的生成质量</p><table>
+<tr><th>Parameters</th>
+<td>n - 质量</td>
+</tr></table>
+</div>
+
+<code class="signature" id="setImgDisplayQuality">public  void <strong>setImgDisplayQuality</strong>(string n)</code>
+<div class="details">
+<p>设置图片的显示质量</p><table>
+<tr><th>Parameters</th>
+<td>n - 质量</td>
+</tr></table>
+</div>
+
+<code class="signature" id="setMaskFont">public  void <strong>setMaskFont</strong>(string|integer font)</code>
+<div class="details">
+<p>设置水印字体</p><table>
+<tr><th>Parameters</th>
+<td>font - 字体</td>
+</tr></table>
+</div>
+
+<code class="signature" id="setMaskFontColor">public  void <strong>setMaskFontColor</strong>(string color)</code>
+<div class="details">
+<p>设置字体颜色</p><table>
+<tr><th>Parameters</th>
+<td>color - 字体颜色</td>
+</tr></table>
+</div>
+
+<code class="signature" id="setMaskFontSize">public  void <strong>setMaskFontSize</strong>(str size)</code>
+<div class="details">
+<p>设置文字字体大小,仅对truetype字体有效</p></div>
+
+<code class="signature" id="setMaskImg">public  void <strong>setMaskImg</strong>(string img)</code>
+<div class="details">
+<p>设置图片水印</p><table>
+<tr><th>Parameters</th>
+<td>img - 水印图片源</td>
+</tr></table>
+</div>
+
+<code class="signature" id="setMaskImgPct">public  void <strong>setMaskImgPct</strong>(integer n)</code>
+<div class="details">
+<p>设置图片合并程度</p><table>
+<tr><th>Parameters</th>
+<td>n - 合并程度</td>
+</tr></table>
+</div>
+
+<code class="signature" id="setMaskOffsetX">public  void <strong>setMaskOffsetX</strong>(integer x)</code>
+<div class="details">
+<p>设置水印横向偏移</p><table>
+<tr><th>Parameters</th>
+<td>x - 横向偏移量</td>
+</tr></table>
+</div>
+
+<code class="signature" id="setMaskOffsetY">public  void <strong>setMaskOffsetY</strong>(integer y)</code>
+<div class="details">
+<p>设置水印纵向偏移</p><table>
+<tr><th>Parameters</th>
+<td>y - 纵向偏移量</td>
+</tr></table>
+</div>
+
+<code class="signature" id="setMaskPosition">public  void <strong>setMaskPosition</strong>(integer position)</code>
+<div class="details">
+<p>指定水印位置</p><table>
+<tr><th>Parameters</th>
+<td>position - 位置,1:左上,2:左下,3:右上,0/4:右下</td>
+</tr></table>
+</div>
+
+<code class="signature" id="setMaskTxtPct">public  void <strong>setMaskTxtPct</strong>(integer n)</code>
+<div class="details">
+<p>设置文字合并程度</p><table>
+<tr><th>Parameters</th>
+<td>n - 合并程度</td>
+</tr></table>
+</div>
+
+<code class="signature" id="setMaskWord">public  void <strong>setMaskWord</strong>(string word, integer font, string color)</code>
+<div class="details">
+<p>设置文字水印</p><table>
+<tr><th>Parameters</th>
+<td>word - 水印文字</td>
+<td>font - 水印字体</td>
+<td>color - 水印字体颜色</td>
+</tr></table>
+</div>
+
+<code class="signature" id="setRectangleCut">public  void <strong>setRectangleCut</strong>(integer width, mixed height)</code>
+<div class="details">
+<p>设置图片剪切</p><table>
+<tr><th>Parameters</th>
+<td>width - 矩形剪切</td>
+</tr></table>
+</div>
+
+<code class="signature" id="setSrcCutPosition">public  void <strong>setSrcCutPosition</strong>((类型) (参数名), mixed x, mixed y)</code>
+<div class="details">
+<p>设置源图剪切起始坐标点</p><table>
+<tr><th>Parameters</th>
+<td>(参数名) - (描述)</td>
+</tr></table>
+</div>
+
+<code class="signature" id="setSrcImg">public  void <strong>setSrcImg</strong>(string src_img, $img_type img_type)</code>
+<div class="details">
+<p>设置源图片路径</p><table>
+<tr><th>Parameters</th>
+<td>src_img - 图片路径</td>
+<td></td>
+</tr></table>
+</div>
+
+<p id="footer">This document was generated by <a href="http://peej.github.com/phpdoctor">PHPDoctor: The PHP Documentation Creator</a></p>
+
+</body>
+
+</html>

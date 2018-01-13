@@ -1,0 +1,12 @@
+﻿[
+    { "id": "0", "text": "测试菜单 1", "iconCls": "icon-standard-accept", "disabled": true },
+    { "id": "1", "text": "系统文档", "iconCls": "icon-hamburg-docs", "href": "/Folder/treeSystem/", "disabled": false},
+    { "id": "2", "text": "个人文档", "iconCls": "icon-hamburg-docs", "href": "/Folder/treePersonal/", "disabled": false},
+    { "id": "3", "text": "设置", "iconCls": "icon-hamburg-docs", "href": "/System/setting/", "disabled": false},
+
+    { "id": "10", "text": "扩展 API 文档", "iconCls": "icon-hamburg-docs", "href": "/Public/common/nav-doc-menu-data.json" },
+    { "id": "11", "text": "演示 DEMO", "iconCls": "icon-hamburg-product-design" , "href": "/Public/common/nav-api-menu-data.json"},
+    { "id": "12", "text": "百度一下", "iconCls": "icon-hamburg-docs", "disabled": false, "attributes":
+        { "href": "http://www.baidu.com", "iniframe": true, "closable": true, "refreshable": true, "selected": true }
+    }
+]

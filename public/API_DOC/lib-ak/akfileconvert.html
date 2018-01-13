@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="PHPDoctor 2.0.5 (http://peej.github.com/phpdoctor/)">
+<meta name="when" content="Sat, 26 Mar 2016 06:21:37 +0000">
+
+<link rel="stylesheet" type="text/css" href="../stylesheet.css">
+<link rel="start" href="../namespaces.html">
+
+<title>AkFileConvert (PHPDoctor)</title>
+
+</head>
+<body id="definition">
+
+<header><h1>PHPDoctor: The PHP Documentation Creator</h1><span>Class</span>
+
+<h2>LIB-Ak\AkFileConvert</h2>
+
+</header><p class="signature">public  class <strong>AkFileConvert</strong></p>
+
+<div class="comment"><p>file convert</p></div>
+
+<table>
+<tr><th>Author</th>
+<td>akiler <532171911@qq.com></td>
+</tr><tr><th>Copyright</th>
+<td>2010-2013</td>
+</tr><tr><th>Version</th>
+<td>1.0</td>
+</tr><tr><th>Since</th>
+<td>2013-02-19</td>
+</tr></table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td class="type"> array</td>
+<td class="description"><p class="name"><a href="#MakePropertyValue()">MakePropertyValue</a>(string name, string value, object osm)</p><p class="description">use openoffice to convert file to pdf
+Notice: must install openoffice in the os first.</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#__construct()">__construct</a>()</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#createPreview()">createPreview</a>(mixed fileBaseName, str page)</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#docx2text()">docx2text</a>(mixed filename)</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#getContents()">getContents</a>(mixed fileBaseName)</p></td>
+</tr>
+<tr>
+<td class="type"> array</td>
+<td class="description"><p class="name"><a href="#getOCR()">getOCR</a>(string fileBaseName)</p><p class="description">get the contents of file with tif extension</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#html2pdf()">html2pdf</a>(string doc_src, string doc_dst)</p><p class="description">convert html to pdf</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#imagickRotate()">imagickRotate</a>(mixed doc_src, mixed doc_dst, int degress)</p></td>
+</tr>
+<tr>
+<td class="type"> bool</td>
+<td class="description"><p class="name"><a href="#isSuccess()">isSuccess</a>()</p><p class="description">check the exec output
+if error happen, return false, else return true.</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#isSupport()">isSupport</a>()</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#jpeg2swf()">jpeg2swf</a>(mixed doc_src, mixed doc_dst, int swf_v)</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#ods2text()">ods2text</a>(mixed filename)</p></td>
+</tr>
+<tr>
+<td class="type"> string</td>
+<td class="description"><p class="name"><a href="#odt2text()">odt2text</a>(string filename)</p><p class="description">convert odt to text
+$filename must contains file path.</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#office2pdf()">office2pdf</a>(string doc_url, string output_url)</p><p class="description">use openoffice to convert file to pdf</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#openOfficeDocumentConvert()">openOfficeDocumentConvert</a>(mixed input, mixed output)</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#pdf2swf()">pdf2swf</a>(mixed doc_src, mixed doc_dst, int swf_v)</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#pptx2text()">pptx2text</a>(mixed filename)</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#pyOffice2pdf()">pyOffice2pdf</a>(mixed doc_url, mixed output_url)</p></td>
+</tr>
+<tr>
+<td class="type"> string</td>
+<td class="description"><p class="name"><a href="#readZippedXML()">readZippedXML</a>(string archiveFile, string dataFile)</p><p class="description">get contents of zip file</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setFilePath()">setFilePath</a>(mixed path)</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#xlsx2text()">xlsx2text</a>(mixed filename)</p></td>
+</tr>
+</table>
+
+<h3>Details</h3>
+<code class="signature" id="MakePropertyValue">public  array <strong>MakePropertyValue</strong>(string name, string value, object osm)</code>
+<div class="details">
+<p>use openoffice to convert file to pdf
+Notice: must install openoffice in the os first.</p></div>
+
+<code class="signature" id="__construct">public  void <strong>__construct</strong>()</code>
+<div class="details">
+</div>
+
+<code class="signature" id="createPreview">public  void <strong>createPreview</strong>(mixed fileBaseName, str page)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="docx2text">public  void <strong>docx2text</strong>(mixed filename)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="getContents">public  void <strong>getContents</strong>(mixed fileBaseName)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="getOCR">public  array <strong>getOCR</strong>(string fileBaseName)</code>
+<div class="details">
+<p>get the contents of file with tif extension</p></div>
+
+<code class="signature" id="html2pdf">public  void <strong>html2pdf</strong>(string doc_src, string doc_dst)</code>
+<div class="details">
+<p>convert html to pdf</p><table>
+<tr><th>Parameters</th>
+<td>doc_src - path to source file, include filename</td>
+<td>doc_dst - path to output file, include filename</td>
+</tr></table>
+</div>
+
+<code class="signature" id="imagickRotate">public  void <strong>imagickRotate</strong>(mixed doc_src, mixed doc_dst, int degress)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="isSuccess">public  bool <strong>isSuccess</strong>()</code>
+<div class="details">
+<p>check the exec output
+if error happen, return false, else return true.</p></div>
+
+<code class="signature" id="isSupport">public  void <strong>isSupport</strong>()</code>
+<div class="details">
+</div>
+
+<code class="signature" id="jpeg2swf">public  void <strong>jpeg2swf</strong>(mixed doc_src, mixed doc_dst, int swf_v)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="ods2text">public  void <strong>ods2text</strong>(mixed filename)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="odt2text">public  string <strong>odt2text</strong>(string filename)</code>
+<div class="details">
+<p>convert odt to text
+$filename must contains file path.</p></div>
+
+<code class="signature" id="office2pdf">public  void <strong>office2pdf</strong>(string doc_url, string output_url)</code>
+<div class="details">
+<p>use openoffice to convert file to pdf</p></div>
+
+<code class="signature" id="openOfficeDocumentConvert">public  void <strong>openOfficeDocumentConvert</strong>(mixed input, mixed output)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="pdf2swf">public  void <strong>pdf2swf</strong>(mixed doc_src, mixed doc_dst, int swf_v)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="pptx2text">public  void <strong>pptx2text</strong>(mixed filename)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="pyOffice2pdf">public  void <strong>pyOffice2pdf</strong>(mixed doc_url, mixed output_url)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="readZippedXML">public  string <strong>readZippedXML</strong>(string archiveFile, string dataFile)</code>
+<div class="details">
+<p>get contents of zip file</p><table>
+<tr><th>Parameters</th>
+<td>archiveFile - file path</td>
+<td>dataFile - data of file key</td>
+</tr><tr><th>Returns</th>
+<td>or false</td>
+</tr></table>
+</div>
+
+<code class="signature" id="setFilePath">public  void <strong>setFilePath</strong>(mixed path)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="xlsx2text">public  void <strong>xlsx2text</strong>(mixed filename)</code>
+<div class="details">
+</div>
+
+<p id="footer">This document was generated by <a href="http://peej.github.com/phpdoctor">PHPDoctor: The PHP Documentation Creator</a></p>
+
+</body>
+
+</html>

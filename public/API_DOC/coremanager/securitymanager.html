@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="PHPDoctor 2.0.5 (http://peej.github.com/phpdoctor/)">
+<meta name="when" content="Sat, 26 Mar 2016 06:21:35 +0000">
+
+<link rel="stylesheet" type="text/css" href="../stylesheet.css">
+<link rel="start" href="../namespaces.html">
+
+<title>SecurityManager (PHPDoctor)</title>
+
+</head>
+<body id="definition">
+
+<header><h1>PHPDoctor: The PHP Documentation Creator</h1><span>Class</span>
+
+<h2>CoreManager\SecurityManager</h2>
+
+</header><p class="signature">public  class <strong>SecurityManager</strong> extends Plugin
+
+</p>
+
+<div class="comment"><p>Security</p><p>This is the security plugin which controls that users only have access to the modules they're assigned to</p></div>
+
+<h3>Methods</h3>
+<table>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#__construct()">__construct</a>()</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#afterDispatch()">afterDispatch</a>(Event event, Dispatcher dispatcher)</p><p class="description">Triggered after executing the controller/action method.
+</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#afterDispatchLoop()">afterDispatchLoop</a>(Event event, Dispatcher dispatcher)</p><p class="description">Triggered after exiting the dispatch loopexecute order: 6</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#afterExecuteRoute()">afterExecuteRoute</a>(Event event, Dispatcher dispatcher)</p><p class="description">Triggered after executing the controller/action method.
+</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#beforeDispatch()">beforeDispatch</a>(Event event, Dispatcher dispatcher)</p><p class="description">Triggered after entering in the dispatch loop.
+</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#beforeDispatchLoop()">beforeDispatchLoop</a>(Event event, Dispatcher dispatcher)</p><p class="description">Triggered before entering in the dispatch loop.
+</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#beforeException()">beforeException</a>(Event event, Dispatcher dispatcher, mixed exception)</p><p class="description">Triggered before the dispatcher throws any exception</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#beforeExecuteRoute()">beforeExecuteRoute</a>(Event event, Dispatcher dispatcher)</p><p class="description">Triggered before executing the controller/action method.
+</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#beforeNotFoundAction()">beforeNotFoundAction</a>(Event event, Dispatcher dispatcher)</p><p class="description">Triggered when the action was not found in the controller</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#initialize()">initialize</a>(Event event, Dispatcher dispatcher)</p><p class="description">Allow to globally initialize the controller in the request</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setPublicResource()">setPublicResource</a>($src src)</p><p class="description">set public resource without login check</p></td>
+</tr>
+</table>
+
+<h3>Details</h3>
+<code class="signature" id="__construct">public  void <strong>__construct</strong>()</code>
+<div class="details">
+</div>
+
+<code class="signature" id="afterDispatch">public  void <strong>afterDispatch</strong>(Event event, Dispatcher dispatcher)</code>
+<div class="details">
+<p>Triggered after executing the controller/action method.
+As operation cannot be stopped, only use this event to make clean up after execute the action</p><p>execute order: 5</p></div>
+
+<code class="signature" id="afterDispatchLoop">public  void <strong>afterDispatchLoop</strong>(Event event, Dispatcher dispatcher)</code>
+<div class="details">
+<p>Triggered after exiting the dispatch loop</p><p>execute order: 6</p></div>
+
+<code class="signature" id="afterExecuteRoute">public  void <strong>afterExecuteRoute</strong>(Event event, Dispatcher dispatcher)</code>
+<div class="details">
+<p>Triggered after executing the controller/action method.
+As operation cannot be stopped, only use this event to make clean up after execute the action</p><p>execute order: 4</p></div>
+
+<code class="signature" id="beforeDispatch">public  void <strong>beforeDispatch</strong>(Event event, Dispatcher dispatcher)</code>
+<div class="details">
+<p>Triggered after entering in the dispatch loop.
+At this point the dispatcher don’t know if the controller or the actions to be executed exist.
+The Dispatcher only knows the information passed by the Router.</p><p>execute order: 2</p></div>
+
+<code class="signature" id="beforeDispatchLoop">public  void <strong>beforeDispatchLoop</strong>(Event event, Dispatcher dispatcher)</code>
+<div class="details">
+<p>Triggered before entering in the dispatch loop.
+At this point the dispatcher don’t know if the controller or the actions to be executed exist.
+The Dispatcher only knows the information passed by the Router.</p><p>execute order: 1</p></div>
+
+<code class="signature" id="beforeException">public  void <strong>beforeException</strong>(Event event, Dispatcher dispatcher, mixed exception)</code>
+<div class="details">
+<p>Triggered before the dispatcher throws any exception</p></div>
+
+<code class="signature" id="beforeExecuteRoute">public  void <strong>beforeExecuteRoute</strong>(Event event, Dispatcher dispatcher)</code>
+<div class="details">
+<p>Triggered before executing the controller/action method.
+At this point the dispatcher has been initialized the controller and know if the action exist.</p><p>execute order: 3</p></div>
+
+<code class="signature" id="beforeNotFoundAction">public  void <strong>beforeNotFoundAction</strong>(Event event, Dispatcher dispatcher)</code>
+<div class="details">
+<p>Triggered when the action was not found in the controller</p></div>
+
+<code class="signature" id="initialize">public  void <strong>initialize</strong>(Event event, Dispatcher dispatcher)</code>
+<div class="details">
+<p>Allow to globally initialize the controller in the request</p></div>
+
+<code class="signature" id="setPublicResource">public  void <strong>setPublicResource</strong>($src src)</code>
+<div class="details">
+<p>set public resource without login check</p></div>
+
+<p id="footer">This document was generated by <a href="http://peej.github.com/phpdoctor">PHPDoctor: The PHP Documentation Creator</a></p>
+
+</body>
+
+</html>

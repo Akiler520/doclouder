@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="PHPDoctor 2.0.5 (http://peej.github.com/phpdoctor/)">
+<meta name="when" content="Sat, 26 Mar 2016 06:21:39 +0000">
+
+<link rel="stylesheet" type="text/css" href="../stylesheet.css">
+<link rel="start" href="../namespaces.html">
+
+<title>AkMysql (PHPDoctor)</title>
+
+</head>
+<body id="definition">
+
+<header><h1>PHPDoctor: The PHP Documentation Creator</h1><span>Class</span>
+
+<h2>LIB-Ak\AkMysql</h2>
+
+</header><p class="signature">public  class <strong>AkMysql</strong></p>
+
+<div class="comment"><p>mysql manager</p></div>
+
+<table>
+<tr><th>Author</th>
+<td>akiler <532171911@qq.com></td>
+</tr><tr><th>Copyright</th>
+<td>Copyright(c) 2010-2020 by akiler. All rights reserved</td>
+</tr><tr><th>Version</th>
+<td>1.0</td>
+</tr><tr><th>Since</th>
+<td>2010-09-29 14:06:12</td>
+</tr></table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#__construct()">__construct</a>()</p></td>
+</tr>
+<tr>
+<td class="type"> bool</td>
+<td class="description"><p class="name"><a href="#avg()">avg</a>($fields fields)</p><p class="description">calculate average by given field</p></td>
+</tr>
+<tr>
+<td class="type">protected  array</td>
+<td class="description"><p class="name"><a href="#cacheFields()">cacheFields</a>()</p><p class="description">cache the fields of current table and return the fields</p></td>
+</tr>
+<tr>
+<td class="type"> bool</td>
+<td class="description"><p class="name"><a href="#close()">close</a>()</p><p class="description">close the connection of database</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#connect()">connect</a>(mixed dbHost, mixed dbUser, mixed dbPassword, str dbName, int pConnect, str dbPrefix, str charSet)</p></td>
+</tr>
+<tr>
+<td class="type"> bool</td>
+<td class="description"><p class="name"><a href="#count()">count</a>(string fields)</p><p class="description">calculate total number of ..</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#debug()">debug</a>(mixed debug)</p></td>
+</tr>
+<tr>
+<td class="type"> bool|int</td>
+<td class="description"><p class="name"><a href="#delete()">delete</a>(array|string data, string where)</p><p class="description">delete data</p></td>
+</tr>
+<tr>
+<td class="type"> string</td>
+<td class="description"><p class="name"><a href="#error()">error</a>()</p><p class="description">get error message</p></td>
+</tr>
+<tr>
+<td class="type"> array|mixed</td>
+<td class="description"><p class="name"><a href="#escape()">escape</a>($string string)</p><p class="description">escape special characters of data</p></td>
+</tr>
+<tr>
+<td class="type"> bool|int</td>
+<td class="description"><p class="name"><a href="#execute()">execute</a>($sql sql)</p><p class="description">only execute the sql string, no data return but boolean</p></td>
+</tr>
+<tr>
+<td class="type">protected  array|mixed</td>
+<td class="description"><p class="name"><a href="#getFields()">getFields</a>()</p><p class="description">get the fields of current selected table</p></td>
+</tr>
+<tr>
+<td class="type"> int</td>
+<td class="description"><p class="name"><a href="#getInsertID()">getInsertID</a>()</p><p class="description">get the last id of the one was inserted</p></td>
+</tr>
+<tr>
+<td class="type">static  Model|object</td>
+<td class="description"><p class="name"><a href="#getInstance()">getInstance</a>()</p><p class="description">instance of the class
+to avoid create multiple instance of class</p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#getLastSql()">getLastSql</a>()</p><p class="description">get the last sql was executed</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#halt()">halt</a>(string message, string sql, string cut)</p><p class="description">if $this->debug = true, break when error happen</p></td>
+</tr>
+<tr>
+<td class="type"> bool|int</td>
+<td class="description"><p class="name"><a href="#insert()">insert</a>($data data)</p><p class="description">insert data by array</p></td>
+</tr>
+<tr>
+<td class="type"> bool</td>
+<td class="description"><p class="name"><a href="#max()">max</a>($fields fields)</p><p class="description">get max one by given field</p></td>
+</tr>
+<tr>
+<td class="type"> bool</td>
+<td class="description"><p class="name"><a href="#min()">min</a>($fields fields)</p><p class="description">get min one by given field</p></td>
+</tr>
+<tr>
+<td class="type"> array|bool</td>
+<td class="description"><p class="name"><a href="#query()">query</a>($sql sql)</p><p class="description">execute a sql string and get result data</p></td>
+</tr>
+<tr>
+<td class="type"> array|bool</td>
+<td class="description"><p class="name"><a href="#select()">select</a>(string where, string fields, string order, string limit, int result_type)</p><p class="description">get data</p></td>
+</tr>
+<tr>
+<td class="type">protected  bool</td>
+<td class="description"><p class="name"><a href="#selectDb()">selectDb</a>(string dbName)</p><p class="description">set the name of database</p></td>
+</tr>
+<tr>
+<td class="type">protected  void</td>
+<td class="description"><p class="name"><a href="#setCharset()">setCharset</a>()</p><p class="description">set the charset of the database</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setConnection()">setConnection</a>($connect connect)</p><p class="description">set the connection of database
+e.g. </p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setTable()">setTable</a>($tableName tableName)</p><p class="description">the the name of the table current operated</p></td>
+</tr>
+<tr>
+<td class="type"> bool</td>
+<td class="description"><p class="name"><a href="#sum()">sum</a>($fields fields)</p><p class="description">calculate sum by given field</p></td>
+</tr>
+<tr>
+<td class="type"> bool|int</td>
+<td class="description"><p class="name"><a href="#update()">update</a>($data data, $where where)</p><p class="description">update data</p></td>
+</tr>
+<tr>
+<td class="type"> string</td>
+<td class="description"><p class="name"><a href="#version()">version</a>()</p><p class="description">get the version of current database</p></td>
+</tr>
+<tr>
+<td class="type">protected  void</td>
+<td class="description"><p class="name"><a href="#writeCache()">writeCache</a>($f f)</p><p class="description">save the fields to static file</p></td>
+</tr>
+</table>
+
+<h3>Details</h3>
+<code class="signature" id="__construct">public  void <strong>__construct</strong>()</code>
+<div class="details">
+</div>
+
+<code class="signature" id="avg">public  bool <strong>avg</strong>($fields fields)</code>
+<div class="details">
+<p>calculate average by given field</p></div>
+
+<code class="signature" id="cacheFields">protected  array <strong>cacheFields</strong>()</code>
+<div class="details">
+<p>cache the fields of current table and return the fields</p></div>
+
+<code class="signature" id="close">public  bool <strong>close</strong>()</code>
+<div class="details">
+<p>close the connection of database</p></div>
+
+<code class="signature" id="connect">public  void <strong>connect</strong>(mixed dbHost, mixed dbUser, mixed dbPassword, str dbName, int pConnect, str dbPrefix, str charSet)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="count">public  bool <strong>count</strong>(string fields)</code>
+<div class="details">
+<p>calculate total number of ..</p></div>
+
+<code class="signature" id="debug">public  void <strong>debug</strong>(mixed debug)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="delete">public  bool|int <strong>delete</strong>(array|string data, string where)</code>
+<div class="details">
+<p>delete data</p></div>
+
+<code class="signature" id="error">public  string <strong>error</strong>()</code>
+<div class="details">
+<p>get error message</p></div>
+
+<code class="signature" id="escape">public  array|mixed <strong>escape</strong>($string string)</code>
+<div class="details">
+<p>escape special characters of data</p></div>
+
+<code class="signature" id="execute">public  bool|int <strong>execute</strong>($sql sql)</code>
+<div class="details">
+<p>only execute the sql string, no data return but boolean</p></div>
+
+<code class="signature" id="getFields">protected  array|mixed <strong>getFields</strong>()</code>
+<div class="details">
+<p>get the fields of current selected table</p></div>
+
+<code class="signature" id="getInsertID">public  int <strong>getInsertID</strong>()</code>
+<div class="details">
+<p>get the last id of the one was inserted</p></div>
+
+<code class="signature" id="getInstance">public static  Model|object <strong>getInstance</strong>()</code>
+<div class="details">
+<p>instance of the class
+to avoid create multiple instance of class</p></div>
+
+<code class="signature" id="getLastSql">public  mixed <strong>getLastSql</strong>()</code>
+<div class="details">
+<p>get the last sql was executed</p></div>
+
+<code class="signature" id="halt">public  void <strong>halt</strong>(string message, string sql, string cut)</code>
+<div class="details">
+<p>if $this->debug = true, break when error happen</p></div>
+
+<code class="signature" id="insert">public  bool|int <strong>insert</strong>($data data)</code>
+<div class="details">
+<p>insert data by array</p></div>
+
+<code class="signature" id="max">public  bool <strong>max</strong>($fields fields)</code>
+<div class="details">
+<p>get max one by given field</p></div>
+
+<code class="signature" id="min">public  bool <strong>min</strong>($fields fields)</code>
+<div class="details">
+<p>get min one by given field</p></div>
+
+<code class="signature" id="query">public  array|bool <strong>query</strong>($sql sql)</code>
+<div class="details">
+<p>execute a sql string and get result data</p></div>
+
+<code class="signature" id="select">public  array|bool <strong>select</strong>(string where, string fields, string order, string limit, int result_type)</code>
+<div class="details">
+<p>get data</p></div>
+
+<code class="signature" id="selectDb">protected  bool <strong>selectDb</strong>(string dbName)</code>
+<div class="details">
+<p>set the name of database</p></div>
+
+<code class="signature" id="setCharset">protected  void <strong>setCharset</strong>()</code>
+<div class="details">
+<p>set the charset of the database</p></div>
+
+<code class="signature" id="setConnection">public  void <strong>setConnection</strong>($connect connect)</code>
+<div class="details">
+<p>set the connection of database
+e.g. if there is another connection of database, we can use the connection by set here.</p></div>
+
+<code class="signature" id="setTable">public  void <strong>setTable</strong>($tableName tableName)</code>
+<div class="details">
+<p>the the name of the table current operated</p></div>
+
+<code class="signature" id="sum">public  bool <strong>sum</strong>($fields fields)</code>
+<div class="details">
+<p>calculate sum by given field</p></div>
+
+<code class="signature" id="update">public  bool|int <strong>update</strong>($data data, $where where)</code>
+<div class="details">
+<p>update data</p></div>
+
+<code class="signature" id="version">public  string <strong>version</strong>()</code>
+<div class="details">
+<p>get the version of current database</p></div>
+
+<code class="signature" id="writeCache">protected  void <strong>writeCache</strong>($f f)</code>
+<div class="details">
+<p>save the fields to static file</p></div>
+
+<p id="footer">This document was generated by <a href="http://peej.github.com/phpdoctor">PHPDoctor: The PHP Documentation Creator</a></p>
+
+</body>
+
+</html>

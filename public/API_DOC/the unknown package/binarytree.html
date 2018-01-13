@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="PHPDoctor 2.0.5 (http://peej.github.com/phpdoctor/)">
+<meta name="when" content="Sat, 26 Mar 2016 06:21:43 +0000">
+
+<link rel="stylesheet" type="text/css" href="../stylesheet.css">
+<link rel="start" href="../namespaces.html">
+
+<title>BinaryTree (PHPDoctor)</title>
+
+</head>
+<body id="definition">
+
+<header><h1>PHPDoctor: The PHP Documentation Creator</h1><span>Class</span>
+
+<h2>The Unknown Package\BinaryTree</h2>
+
+</header><p class="signature">public  class <strong>BinaryTree</strong></p>
+
+<h3>Fields</h3>
+<table>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#_count">$_count</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#mPBTdata">$mPBTdata</a></p></td>
+</tr>
+<tr>
+<td class="type"> mixed</td>
+<td class="description"><p class="name"><a href="#mRoot">$mRoot</a></p></td>
+</tr>
+</table>
+
+<h3>Methods</h3>
+<table>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#__construct()">__construct</a>(array btdata)</p><p class="description">构造方法,初始化建立二叉树</p></td>
+</tr>
+<tr>
+<td class="type"> int</td>
+<td class="description"><p class="name"><a href="#getBinaryTreeDepth()">getBinaryTreeDepth</a>(<a href="../the unknown package/btnode.html">BTNode</a> objRootNode)</p><p class="description">求二叉树的深度</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#getInorderTraversal()">getInorderTraversal</a>(<a href="../the unknown package/btnode.html">BTNode</a> objRootNode, array arrBTdata)</p><p class="description">中序遍历二叉树</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#getInorderTraversalNoRecursion()">getInorderTraversalNoRecursion</a>(<a href="../the unknown package/btnode.html">BTNode</a> objRootNode, array arrBTdata)</p><p class="description">中序遍历的非递归算法</p></td>
+</tr>
+<tr>
+<td class="type"> boolean</td>
+<td class="description"><p class="name"><a href="#getIsEmpty()">getIsEmpty</a>()</p><p class="description">判断二叉树是否为空</p></td>
+</tr>
+<tr>
+<td class="type"> int</td>
+<td class="description"><p class="name"><a href="#getLeafNodeCount()">getLeafNodeCount</a>(<a href="../the unknown package/btnode.html">BTNode</a> objRootNode)</p><p class="description">求二叉树叶子结点的个数</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#getLevelorderTraversal()">getLevelorderTraversal</a>(<a href="../the unknown package/btnode.html">BTNode</a> objRootNode二叉树根节点, array arrBTdata, mixed objRootNode)</p><p class="description">层次遍历二叉树</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#getPostorderTraversal()">getPostorderTraversal</a>(<a href="../the unknown package/btnode.html">BTNode</a> objRootNode, array arrBTdata)</p><p class="description">后序遍历二叉树</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#getPostorderTraversalNoRecursion()">getPostorderTraversalNoRecursion</a>(mixed objRootNode, mixed arrBTdata)</p><p class="description">后序遍历非递归算法BTNode $objRootNode 二叉树根节点
+array $arrBTdata 接收值的数组变量，按引用方式传递
+void</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#getPreorderTraversal()">getPreorderTraversal</a>(<a href="../the unknown package/btnode.html">BTNode</a> rootnode, array btarr)</p><p class="description">按先序遍历二叉树</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#getPreorderTraversalCreate()">getPreorderTraversalCreate</a>(<a href="../the unknown package/btnode.html">BTNode</a> 二叉树结点，按引用方式传递, mixed btnode)</p><p class="description">按先序遍历方式建立二叉树</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#getPreorderTraversalNoRecursion()">getPreorderTraversalNoRecursion</a>(<a href="../the unknown package/btnode.html">BTNode</a> objRootNode, array arrBTdata)</p><p class="description">先序遍历的非递归算法</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setBinaryTreeNull()">setBinaryTreeNull</a>()</p><p class="description">将二叉树置空</p></td>
+</tr>
+</table>
+
+<h3>Details</h3>
+<code class="signature" id="_count">public  mixed <strong>$_count</strong> = 0</code>
+<div class="details">
+</div>
+
+<code class="signature" id="mPBTdata">public  mixed <strong>$mPBTdata</strong> = null</code>
+<div class="details">
+</div>
+
+<code class="signature" id="mRoot">public  mixed <strong>$mRoot</strong></code>
+<div class="details">
+</div>
+
+<code class="signature" id="__construct">public  void <strong>__construct</strong>(array btdata)</code>
+<div class="details">
+<p>构造方法,初始化建立二叉树</p><table>
+<tr><th>Parameters</th>
+<td>btdata - 根据先序遍历录入的二叉树的数据，一维数组，每一个元素代表二叉树一个结点值,扩充结点值为''[长度为0的字符串]</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getBinaryTreeDepth">public  int <strong>getBinaryTreeDepth</strong>(<a href="../the unknown package/btnode.html">BTNode</a> objRootNode)</code>
+<div class="details">
+<p>求二叉树的深度</p><table>
+<tr><th>Parameters</th>
+<td>objRootNode - 二叉树根节点</td>
+</tr><tr><th>Returns</th>
+<td>参数传递错误返回-1</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getInorderTraversal">public  void <strong>getInorderTraversal</strong>(<a href="../the unknown package/btnode.html">BTNode</a> objRootNode, array arrBTdata)</code>
+<div class="details">
+<p>中序遍历二叉树</p><table>
+<tr><th>Parameters</th>
+<td>objRootNode - 过程中的根节点</td>
+<td>arrBTdata - 接收值的数组变量,按引用方式传递</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getInorderTraversalNoRecursion">public  void <strong>getInorderTraversalNoRecursion</strong>(<a href="../the unknown package/btnode.html">BTNode</a> objRootNode, array arrBTdata)</code>
+<div class="details">
+<p>中序遍历的非递归算法</p><table>
+<tr><th>Parameters</th>
+<td>objRootNode - 二叉树根结点</td>
+<td>arrBTdata - 接收值的数组变量，按引用方式传递</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getIsEmpty">public  boolean <strong>getIsEmpty</strong>()</code>
+<div class="details">
+<p>判断二叉树是否为空</p><table>
+<tr><th>Returns</th>
+<td>如果二叉树不空返回true,否则返回false</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getLeafNodeCount">public  int <strong>getLeafNodeCount</strong>(<a href="../the unknown package/btnode.html">BTNode</a> objRootNode)</code>
+<div class="details">
+<p>求二叉树叶子结点的个数</p><table>
+<tr><th>Parameters</th>
+<td>objRootNode - 二叉树根节点</td>
+</tr><tr><th>Returns</th>
+<td>参数传递错误返回-1</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getLevelorderTraversal">public  void <strong>getLevelorderTraversal</strong>(<a href="../the unknown package/btnode.html">BTNode</a> objRootNode二叉树根节点, array arrBTdata, mixed objRootNode)</code>
+<div class="details">
+<p>层次遍历二叉树</p><table>
+<tr><th>Parameters</th>
+<td></td>
+<td>arrBTdata - 接收值的数组变量，按引用方式传递</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getPostorderTraversal">public  void <strong>getPostorderTraversal</strong>(<a href="../the unknown package/btnode.html">BTNode</a> objRootNode, array arrBTdata)</code>
+<div class="details">
+<p>后序遍历二叉树</p><table>
+<tr><th>Parameters</th>
+<td>objRootNode - 遍历过程中的根结点</td>
+<td>arrBTdata - 接收值的数组变量，引用方式传递</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getPostorderTraversalNoRecursion">public  void <strong>getPostorderTraversalNoRecursion</strong>(mixed objRootNode, mixed arrBTdata)</code>
+<div class="details">
+<p>后序遍历非递归算法</p><p>BTNode $objRootNode 二叉树根节点
+array $arrBTdata 接收值的数组变量，按引用方式传递
+void</p></div>
+
+<code class="signature" id="getPreorderTraversal">public  void <strong>getPreorderTraversal</strong>(<a href="../the unknown package/btnode.html">BTNode</a> rootnode, array btarr)</code>
+<div class="details">
+<p>按先序遍历二叉树</p><table>
+<tr><th>Parameters</th>
+<td>rootnode - 遍历过程中的根结点</td>
+<td>btarr - 接收值的数组变量，按引用方式传递</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getPreorderTraversalCreate">public  void <strong>getPreorderTraversalCreate</strong>(<a href="../the unknown package/btnode.html">BTNode</a> 二叉树结点，按引用方式传递, mixed btnode)</code>
+<div class="details">
+<p>按先序遍历方式建立二叉树</p></div>
+
+<code class="signature" id="getPreorderTraversalNoRecursion">public  void <strong>getPreorderTraversalNoRecursion</strong>(<a href="../the unknown package/btnode.html">BTNode</a> objRootNode, array arrBTdata)</code>
+<div class="details">
+<p>先序遍历的非递归算法</p><table>
+<tr><th>Parameters</th>
+<td>objRootNode - 二叉树根节点</td>
+<td>arrBTdata - 接收值的数组变量，按引用方式传递</td>
+</tr></table>
+</div>
+
+<code class="signature" id="setBinaryTreeNull">public  void <strong>setBinaryTreeNull</strong>()</code>
+<div class="details">
+<p>将二叉树置空</p></div>
+
+<p id="footer">This document was generated by <a href="http://peej.github.com/phpdoctor">PHPDoctor: The PHP Documentation Creator</a></p>
+
+</body>
+
+</html>

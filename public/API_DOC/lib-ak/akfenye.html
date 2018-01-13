@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="PHPDoctor 2.0.5 (http://peej.github.com/phpdoctor/)">
+<meta name="when" content="Sat, 26 Mar 2016 06:21:37 +0000">
+
+<link rel="stylesheet" type="text/css" href="../stylesheet.css">
+<link rel="start" href="../namespaces.html">
+
+<title>AkFenYe (PHPDoctor)</title>
+
+</head>
+<body id="definition">
+
+<header><h1>PHPDoctor: The PHP Documentation Creator</h1><span>Class</span>
+
+<h2>LIB-Ak\AkFenYe</h2>
+
+</header><p class="signature">public  class <strong>AkFenYe</strong></p>
+
+<div class="comment"><p>分页</p></div>
+
+<table>
+<tr><th>Author</th>
+<td>akiler <532171911@qq.com></td>
+</tr><tr><th>Copyright</th>
+<td>Copyright(c) 2010-2020 by akiler. All rights reserved</td>
+</tr><tr><th>Version</th>
+<td>1.0</td>
+</tr><tr><th>Since</th>
+<td>2014-03-29 12:01:12</td>
+</tr></table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#__construct()">__construct</a>(mixed sql, mixed url, mixed pagesize, mixed pageindexsize)</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#fenye()">fenye</a>(mixed data_sql)</p></td>
+</tr>
+<tr>
+<td class="type"> the</td>
+<td class="description"><p class="name"><a href="#getData()">getData</a>()</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> the</td>
+<td class="description"><p class="name"><a href="#getData_sql()">getData_sql</a>()</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> the</td>
+<td class="description"><p class="name"><a href="#getEnd()">getEnd</a>()</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> the</td>
+<td class="description"><p class="name"><a href="#getEndpage()">getEndpage</a>()</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> the</td>
+<td class="description"><p class="name"><a href="#getEndpage_txt()">getEndpage_txt</a>()</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> the</td>
+<td class="description"><p class="name"><a href="#getFirstpage_txt()">getFirstpage_txt</a>()</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> the</td>
+<td class="description"><p class="name"><a href="#getFristpage()">getFristpage</a>()</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> the</td>
+<td class="description"><p class="name"><a href="#getNavigation_bar()">getNavigation_bar</a>()</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> the</td>
+<td class="description"><p class="name"><a href="#getNextpage()">getNextpage</a>()</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> the</td>
+<td class="description"><p class="name"><a href="#getNextpage_txt()">getNextpage_txt</a>()</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> the</td>
+<td class="description"><p class="name"><a href="#getPagecount()">getPagecount</a>()</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> the</td>
+<td class="description"><p class="name"><a href="#getPageindex()">getPageindex</a>()</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> the</td>
+<td class="description"><p class="name"><a href="#getPageindexcount()">getPageindexcount</a>()</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> the</td>
+<td class="description"><p class="name"><a href="#getPageindexid()">getPageindexid</a>()</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> the</td>
+<td class="description"><p class="name"><a href="#getPageindexsize()">getPageindexsize</a>()</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> the</td>
+<td class="description"><p class="name"><a href="#getPagenow()">getPagenow</a>()</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> the</td>
+<td class="description"><p class="name"><a href="#getPagenowid()">getPagenowid</a>()</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> the</td>
+<td class="description"><p class="name"><a href="#getPagesize()">getPagesize</a>()</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> the</td>
+<td class="description"><p class="name"><a href="#getPageup()">getPageup</a>()</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> the</td>
+<td class="description"><p class="name"><a href="#getPageup_txt()">getPageup_txt</a>()</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> the</td>
+<td class="description"><p class="name"><a href="#getStart()">getStart</a>()</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> the</td>
+<td class="description"><p class="name"><a href="#getUrl()">getUrl</a>()</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setData()">setData</a>(field_type data)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setData_sql()">setData_sql</a>(field_type data_sql)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setEndpage_txt()">setEndpage_txt</a>(field_type endpage_txt)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setFirstpage_txt()">setFirstpage_txt</a>(field_type firstpage_txt)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setNavigation_bar()">setNavigation_bar</a>(field_type navigation_bar)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setNextpage_txt()">setNextpage_txt</a>(field_type nextpage_txt)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setPagecount()">setPagecount</a>(field_type pagecount)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setPageindex()">setPageindex</a>(field_type pageindex)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setPageindexcount()">setPageindexcount</a>(field_type pageindexcount)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setPageindexid()">setPageindexid</a>(string pageindexid)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setPageindexsize()">setPageindexsize</a>(field_type pageindexsize)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setPagenow()">setPagenow</a>(field_type pagenow)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setPagenowid()">setPagenowid</a>(string pagenowid)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setPagesize()">setPagesize</a>(field_type pagesize)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setPageup_txt()">setPageup_txt</a>(field_type pageup_txt)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setUrl()">setUrl</a>(field_type url)</p><p class="description"></p></td>
+</tr>
+</table>
+
+<h3>Details</h3>
+<code class="signature" id="__construct">public  void <strong>__construct</strong>(mixed sql, mixed url, mixed pagesize, mixed pageindexsize)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="fenye">public  void <strong>fenye</strong>(mixed data_sql)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="getData">public  the <strong>getData</strong>()</code>
+<div class="details">
+<p></p><table>
+<tr><th>Returns</th>
+<td>$data</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getData_sql">public  the <strong>getData_sql</strong>()</code>
+<div class="details">
+<p></p><table>
+<tr><th>Returns</th>
+<td>$data_sql</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getEnd">public  the <strong>getEnd</strong>()</code>
+<div class="details">
+<p></p><table>
+<tr><th>Returns</th>
+<td>$end</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getEndpage">public  the <strong>getEndpage</strong>()</code>
+<div class="details">
+<p></p><table>
+<tr><th>Returns</th>
+<td>$endpage</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getEndpage_txt">public  the <strong>getEndpage_txt</strong>()</code>
+<div class="details">
+<p></p><table>
+<tr><th>Returns</th>
+<td>$endpage_txt</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getFirstpage_txt">public  the <strong>getFirstpage_txt</strong>()</code>
+<div class="details">
+<p></p><table>
+<tr><th>Returns</th>
+<td>$firstpage_txt</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getFristpage">public  the <strong>getFristpage</strong>()</code>
+<div class="details">
+<p></p><table>
+<tr><th>Returns</th>
+<td>$fristpage</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getNavigation_bar">public  the <strong>getNavigation_bar</strong>()</code>
+<div class="details">
+<p></p><table>
+<tr><th>Returns</th>
+<td>$navigation_bar</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getNextpage">public  the <strong>getNextpage</strong>()</code>
+<div class="details">
+<p></p><table>
+<tr><th>Returns</th>
+<td>$nextpage</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getNextpage_txt">public  the <strong>getNextpage_txt</strong>()</code>
+<div class="details">
+<p></p><table>
+<tr><th>Returns</th>
+<td>$nextpage_txt</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getPagecount">public  the <strong>getPagecount</strong>()</code>
+<div class="details">
+<p></p><table>
+<tr><th>Returns</th>
+<td>$pagecount</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getPageindex">public  the <strong>getPageindex</strong>()</code>
+<div class="details">
+<p></p><table>
+<tr><th>Returns</th>
+<td>$pageindex</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getPageindexcount">public  the <strong>getPageindexcount</strong>()</code>
+<div class="details">
+<p></p><table>
+<tr><th>Returns</th>
+<td>$pageindexcount</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getPageindexid">public  the <strong>getPageindexid</strong>()</code>
+<div class="details">
+<p></p><table>
+<tr><th>Returns</th>
+<td>$pageindexid</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getPageindexsize">public  the <strong>getPageindexsize</strong>()</code>
+<div class="details">
+<p></p><table>
+<tr><th>Returns</th>
+<td>$pageindexsize</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getPagenow">public  the <strong>getPagenow</strong>()</code>
+<div class="details">
+<p></p><table>
+<tr><th>Returns</th>
+<td>$pagenow</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getPagenowid">public  the <strong>getPagenowid</strong>()</code>
+<div class="details">
+<p></p><table>
+<tr><th>Returns</th>
+<td>$pagenowid</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getPagesize">public  the <strong>getPagesize</strong>()</code>
+<div class="details">
+<p></p><table>
+<tr><th>Returns</th>
+<td>$pagesize</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getPageup">public  the <strong>getPageup</strong>()</code>
+<div class="details">
+<p></p><table>
+<tr><th>Returns</th>
+<td>$pageup</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getPageup_txt">public  the <strong>getPageup_txt</strong>()</code>
+<div class="details">
+<p></p><table>
+<tr><th>Returns</th>
+<td>$pageup_txt</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getStart">public  the <strong>getStart</strong>()</code>
+<div class="details">
+<p></p><table>
+<tr><th>Returns</th>
+<td>$start</td>
+</tr></table>
+</div>
+
+<code class="signature" id="getUrl">public  the <strong>getUrl</strong>()</code>
+<div class="details">
+<p></p><table>
+<tr><th>Returns</th>
+<td>$url</td>
+</tr></table>
+</div>
+
+<code class="signature" id="setData">public  void <strong>setData</strong>(field_type data)</code>
+<div class="details">
+<p></p></div>
+
+<code class="signature" id="setData_sql">public  void <strong>setData_sql</strong>(field_type data_sql)</code>
+<div class="details">
+<p></p></div>
+
+<code class="signature" id="setEndpage_txt">public  void <strong>setEndpage_txt</strong>(field_type endpage_txt)</code>
+<div class="details">
+<p></p></div>
+
+<code class="signature" id="setFirstpage_txt">public  void <strong>setFirstpage_txt</strong>(field_type firstpage_txt)</code>
+<div class="details">
+<p></p></div>
+
+<code class="signature" id="setNavigation_bar">public  void <strong>setNavigation_bar</strong>(field_type navigation_bar)</code>
+<div class="details">
+<p></p></div>
+
+<code class="signature" id="setNextpage_txt">public  void <strong>setNextpage_txt</strong>(field_type nextpage_txt)</code>
+<div class="details">
+<p></p></div>
+
+<code class="signature" id="setPagecount">public  void <strong>setPagecount</strong>(field_type pagecount)</code>
+<div class="details">
+<p></p></div>
+
+<code class="signature" id="setPageindex">public  void <strong>setPageindex</strong>(field_type pageindex)</code>
+<div class="details">
+<p></p></div>
+
+<code class="signature" id="setPageindexcount">public  void <strong>setPageindexcount</strong>(field_type pageindexcount)</code>
+<div class="details">
+<p></p></div>
+
+<code class="signature" id="setPageindexid">public  void <strong>setPageindexid</strong>(string pageindexid)</code>
+<div class="details">
+<p></p></div>
+
+<code class="signature" id="setPageindexsize">public  void <strong>setPageindexsize</strong>(field_type pageindexsize)</code>
+<div class="details">
+<p></p></div>
+
+<code class="signature" id="setPagenow">public  void <strong>setPagenow</strong>(field_type pagenow)</code>
+<div class="details">
+<p></p></div>
+
+<code class="signature" id="setPagenowid">public  void <strong>setPagenowid</strong>(string pagenowid)</code>
+<div class="details">
+<p></p></div>
+
+<code class="signature" id="setPagesize">public  void <strong>setPagesize</strong>(field_type pagesize)</code>
+<div class="details">
+<p></p></div>
+
+<code class="signature" id="setPageup_txt">public  void <strong>setPageup_txt</strong>(field_type pageup_txt)</code>
+<div class="details">
+<p></p></div>
+
+<code class="signature" id="setUrl">public  void <strong>setUrl</strong>(field_type url)</code>
+<div class="details">
+<p></p></div>
+
+<p id="footer">This document was generated by <a href="http://peej.github.com/phpdoctor">PHPDoctor: The PHP Documentation Creator</a></p>
+
+</body>
+
+</html>

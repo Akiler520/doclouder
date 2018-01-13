@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="PHPDoctor 2.0.5 (http://peej.github.com/phpdoctor/)">
+<meta name="when" content="Sat, 26 Mar 2016 06:21:35 +0000">
+
+<link rel="stylesheet" type="text/css" href="../stylesheet.css">
+<link rel="start" href="../namespaces.html">
+
+<title>AkDownload (PHPDoctor)</title>
+
+</head>
+<body id="definition">
+
+<header><h1>PHPDoctor: The PHP Documentation Creator</h1><span>Class</span>
+
+<h2>LIB-Ak\AkDownload</h2>
+
+</header><p class="signature">public  class <strong>AkDownload</strong></p>
+
+<div class="comment"><p>file download</p></div>
+
+<table>
+<tr><th>Author</th>
+<td>akiler <532171911@qq.com></td>
+</tr><tr><th>Copyright</th>
+<td>2010-2013</td>
+</tr><tr><th>Version</th>
+<td>1.0</td>
+</tr><tr><th>Since</th>
+<td>2013-02-19</td>
+</tr></table>
+<h3>Fields</h3>
+<table>
+<tr>
+<td class="type"> array</td>
+<td class="description"><p class="name"><a href="#Filter">$Filter</a></p><p class="description">the allowed file extension</p></td>
+</tr>
+<tr>
+<td class="type"> bool</td>
+<td class="description"><p class="name"><a href="#debug">$debug</a></p><p class="description">if to be test</p></td>
+</tr>
+<tr>
+<td class="type"> string</td>
+<td class="description"><p class="name"><a href="#errormsg">$errormsg</a></p><p class="description">error information</p></td>
+</tr>
+<tr>
+<td class="type"> string</td>
+<td class="description"><p class="name"><a href="#filename">$filename</a></p><p class="description">file name</p></td>
+</tr>
+<tr>
+<td class="type"> string</td>
+<td class="description"><p class="name"><a href="#mineType">$mineType</a></p><p class="description">file type</p></td>
+</tr>
+<tr>
+<td class="type"> array</td>
+<td class="description"><p class="name"><a href="#xlq_filetype">$xlq_filetype</a></p><p class="description">list of file type</p></td>
+</tr>
+</table>
+
+<h3>Methods</h3>
+<table>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#__construct()">__construct</a>(str fileFilter, bool isdebug)</p></td>
+</tr>
+<tr>
+<td class="type"> bool</td>
+<td class="description"><p class="name"><a href="#downloadfile()">downloadfile</a>(string filename, string downname)</p><p class="description">download the file</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#filecheck()">filecheck</a>()</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#geterrormsg()">geterrormsg</a>()</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setFilter()">setFilter</a>(str fileFilter)</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setdebug()">setdebug</a>(mixed debug)</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setfilename()">setfilename</a>(mixed filename)</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#setfiletype()">setfiletype</a>()</p></td>
+</tr>
+<tr>
+<td class="type"> void</td>
+<td class="description"><p class="name"><a href="#tozip()">tozip</a>(mixed items)</p></td>
+</tr>
+</table>
+
+<h3>Details</h3>
+<code class="signature" id="Filter">public  array <strong>$Filter</strong> = array(...)</code>
+<div class="details">
+<p>the allowed file extension</p></div>
+
+<code class="signature" id="debug">public  bool <strong>$debug</strong> = false</code>
+<div class="details">
+<p>if to be test</p></div>
+
+<code class="signature" id="errormsg">public  string <strong>$errormsg</strong> = ''</code>
+<div class="details">
+<p>error information</p></div>
+
+<code class="signature" id="filename">public  string <strong>$filename</strong> = ''</code>
+<div class="details">
+<p>file name</p></div>
+
+<code class="signature" id="mineType">public  string <strong>$mineType</strong> = ''</code>
+<div class="details">
+<p>file type</p></div>
+
+<code class="signature" id="xlq_filetype">public  array <strong>$xlq_filetype</strong> = array()</code>
+<div class="details">
+<p>list of file type</p></div>
+
+<code class="signature" id="__construct">public  void <strong>__construct</strong>(str fileFilter, bool isdebug)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="downloadfile">public  bool <strong>downloadfile</strong>(string filename, string downname)</code>
+<div class="details">
+<p>download the file</p><table>
+<tr><th>Parameters</th>
+<td>filename - => the name the file in the disk, must include the path to the file</td>
+<td>downname - => the name will show in the front download title.</td>
+</tr></table>
+</div>
+
+<code class="signature" id="filecheck">public  void <strong>filecheck</strong>()</code>
+<div class="details">
+</div>
+
+<code class="signature" id="geterrormsg">public  void <strong>geterrormsg</strong>()</code>
+<div class="details">
+</div>
+
+<code class="signature" id="setFilter">public  void <strong>setFilter</strong>(str fileFilter)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="setdebug">public  void <strong>setdebug</strong>(mixed debug)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="setfilename">public  void <strong>setfilename</strong>(mixed filename)</code>
+<div class="details">
+</div>
+
+<code class="signature" id="setfiletype">public  void <strong>setfiletype</strong>()</code>
+<div class="details">
+</div>
+
+<code class="signature" id="tozip">public  void <strong>tozip</strong>(mixed items)</code>
+<div class="details">
+</div>
+
+<p id="footer">This document was generated by <a href="http://peej.github.com/phpdoctor">PHPDoctor: The PHP Documentation Creator</a></p>
+
+</body>
+
+</html>
